@@ -9,6 +9,7 @@ export const API_REQUEST = async (type, endpoint, data) => {
 
     try {
       if(type === "get"){
+        console.log(API_RESOURCE)
          const GET_REQUEST = await axios({
              method: type,
              url: `${API_RESOURCE}${endpoint}`,
