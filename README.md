@@ -7,19 +7,25 @@ Create an empty folder, where you can insert your repository.
 
 ### 2nd step:
 ```
-Drag the root project folder to your VSCode.
+Clone this repository on the folder that you've made.
 ```
 
 ### 3rd step:
 ```
-Open your terminal
+Drag the root folder project folder to your VSCode.
 ```
 
 ### 4th step:
 ```
+Open your terminal
+```
+
+### 5th step:
+```
 run this command: npm run serve
 ```
-note: if you have problem on running the project please ask the frontend developers to assist you on your problem.
+
+note: if you have problem on running this project, please contact the frontend developers to assist you on your problem.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
