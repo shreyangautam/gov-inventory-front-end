@@ -1,24 +1,36 @@
-# vuex_template
+# HOW TO RUN THIS REPOSITORY
 
-## Project setup
+### 1st step:
 ```
-npm install
+Create an empty folder, where you can insert your repository.
 ```
 
-### Compiles and hot-reloads for development
+### 2nd step:
 ```
+Clone this repository on the folder that you've made.
+```
+
+### 3rd step:
+```
+Drag the root project folder to your VSCode.
+```
+
+### 4th step:
+```
+Open your terminal on VSCode.
+```
+
+### 5th step:
+```
+run this command: 
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+note: if you have problem on running this project, please contact the frontend developers to assist you on your problem.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+# GUIDELINES ON ISSUE
+![guidelines](https://user-images.githubusercontent.com/56121820/112753280-9131d680-9009-11eb-812e-51ac304f76bb.png)
+
