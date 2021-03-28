@@ -12,17 +12,18 @@ Clone this repository on the folder that you've made.
 
 ### 3rd step:
 ```
-Drag the root folder project folder to your VSCode.
+Drag the root project folder to your VSCode.
 ```
 
 ### 4th step:
 ```
-Open your terminal
+Open your terminal on VSCode.
 ```
 
 ### 5th step:
 ```
-run this command: npm run serve
+run this command: 
+npm run serve
 ```
 
 note: if you have problem on running this project, please contact the frontend developers to assist you on your problem.
