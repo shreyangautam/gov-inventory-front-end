@@ -1,16 +1,10 @@
 <template>
-  <div class="container">
-    <Header title="Task Tracker" />
-    <h1 v-if="showLoad">...LOADING</h1>
-    <Tasks :tasks="tasks" />
-  </div>
+  <LoginPage/>
 </template>
 
 <script>
 //COMPONENTS
-import Header from "./components/Header";
-import Tasks from "./components/Tasks";
-
+import LoginPage from "./pages/Login/Login"
 //HELPERS
 //import { API_REQUEST } from "./helpers/helpers";
 
@@ -26,19 +20,14 @@ export default {
     };
   },
   components: {
-    Header,
-    Tasks,
+    LoginPage
   },
   created() {
-    this.showLoad = true;
-    this.getTasks();
+
   },
   computed: mapState(["tasks"]),
   methods: {
-    async getTasks() {
-      await store.dispatch("getTasks");
-      this.showLoad = false;
-    },
+
   },
 };
 </script>
