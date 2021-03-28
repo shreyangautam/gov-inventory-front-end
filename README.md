@@ -1,6 +1,6 @@
 # How to run this repository
 
-## 1st step:
+### 1st step:
 ```
 Create an empty folder, where you can insert your repository.
 ```
