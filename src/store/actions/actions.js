@@ -1,8 +1,8 @@
 //Import all actions that will be used by the app
-import TasksAction from "./Tasks/tasksActions"
+import UserDataActions from "./UserData/userDataActions"
 
 
 //spred the actions
 export default {
-    ...TasksAction
+     ...UserDataActions
 }

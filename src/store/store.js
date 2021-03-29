@@ -4,7 +4,7 @@ import actions from "./actions/actions"
 
 export default createStore({
   state: {
-    tasks: []
+    userData: null,
   },
   mutations,
   actions,

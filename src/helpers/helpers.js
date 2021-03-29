@@ -5,14 +5,15 @@ import { API_RESOURCE } from "./variables"
 /*
 @API_REQUEST - Import this function for API calls
 */
-export const API_REQUEST = async (type, endpoint, data) => {
+export const API_REQUEST = async (type, endpoint, data, params) => {
 
     try {
       if(type === "get"){
-        console.log(API_RESOURCE)
+        console.log(params)
          const GET_REQUEST = await axios({
              method: type,
              url: `${API_RESOURCE}${endpoint}`,
+             params: params ? {...params} : ''
          })
          let { data } = GET_REQUEST
          return data
