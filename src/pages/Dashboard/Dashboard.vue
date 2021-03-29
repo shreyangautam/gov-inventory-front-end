@@ -1,14 +1,17 @@
 <template>
   <div>
-    <h1>This is the dashboard</h1>
+    <Sidebar/>
   </div>
 </template>
 
 <script>
-
+import Sidebar from '../../components/Forms/Sidebar'
 import { mapState } from "vuex";
 
 export default {
+  components: {
+    Sidebar
+  },
   computed: mapState(["userData"]),
   created(){
     console.log(this.userData)
