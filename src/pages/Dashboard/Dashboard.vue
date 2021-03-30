@@ -4,16 +4,20 @@
       <Sidebar/>
     </div>
     <div class="flex flex-col w-full">
-      <header class="text-white bg-blue-700 shadow-lg sticky left-auto top-0 right-0">
+      <header class="text-white bg-blue-500 shadow-lg sticky left-auto top-0 right-0">
         <div class="h-12 px-6 flex relative items-center justify-between">
           <div class="flex items-center">
-            <img src="../../assets/logo.png" alt="" class="h-8 w-18 mr-3 object-contain">
-            <h1 class="text-lg font-bold font-sans tracking-wide uppercase">PGSO Inventory</h1>
+            <p class="text-white text-md font-semibold tracking-wider uppercase">Dashboard</p>
           </div>
           <div>
-            <ul class="flex flex-row">
-              <li>Home</li>
-            </ul>
+            <div class="flex flex-row space-x-2">
+              <span>
+                <a href=""><img src="../../assets/svg/bell.svg" alt="icon" class="h-4 w-4"></a>
+              </span>
+              <span>
+                <a href=""><img src="../../assets/svg/settings.svg" alt="icon" class="h-4 w-4"></a>
+              </span>
+            </div>
           </div>
         </div>
       </header>
