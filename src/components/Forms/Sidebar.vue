@@ -20,12 +20,12 @@
             </div>
             <div :class="containerMenu">
                 <ul :class="menuList">
-                    <li class="px-6 mr-2">
+                    <div class="px-6 mr-2 mb-2">
                         <div :class="headerContainer" class="bg-secondary">
                             <img src="../../assets/svg/dashboard.svg" alt="dashboard icon" class="h-3 w-3 mr-2">
                             <div :class="dashboardHeader">Dashboard</div>
                         </div>
-                    </li>
+                    </div>
                     <li class="px-6 mr-2">
                         <a href="#" :class="menuListLink">
                             <span :class="menuListIcon">
