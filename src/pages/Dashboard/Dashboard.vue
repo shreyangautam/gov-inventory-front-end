@@ -20,9 +20,10 @@ export default {
     Navigation
   },
 
-  computed: mapState(["userData"]),
+  computed: mapState(["userData", "token"]),
   created(){
     console.log(this.userData)
+    console.log(this.token)
   }
 };
 </script>
