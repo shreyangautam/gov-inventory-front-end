@@ -13,8 +13,9 @@
       <div :class="rightContainer">
         <h3 :class="loginHeader">ACCOUNT LOGIN</h3>
 
-        <h3 v-if="isLoginFailed">Invalid Email or Password</h3>
-        <Loading/>
+        <h3 :class="invalidMsg" v-if="isLoginFailed">{{isLoginFailed ? 'Invalid Email or Password' : ''}}</h3>
+        <Loading v-if="isLoading"/>
+        <div :class="space" v-if="!isLoading && !isLoginFailed"></div>
         <form :class="formStyle">
           <div :class="inputContainer">
             <label for="email" :class="inputLabel">Email address</label>
@@ -22,7 +23,7 @@
               type="email"
               id="email"
               autofocus
-              :class="inputField"
+              :class="[isLoginFailed ? inputFieldInvalid : inputField]"
               v-model="email"
             />
           </div>
@@ -34,7 +35,7 @@
             <input
               type="password"
               id="password"
-              :class="inputField"
+              :class="[isLoginFailed ? inputFieldInvalid : inputField]"
               v-model="password"
             />
           </div>
@@ -45,7 +46,10 @@
             >
           </div>
         </form>
-        <button :class="submitButton" @click="$emit('login', email, password)">Log in</button>
+        <button 
+         :class="[isLoading ? submitButtonDisabled : submitButton]" 
+         @click="$emit('login', email, password)" 
+         :disabled="isLoading">{{isLoading ? 'Logging in...' : 'Log in'}}</button>
       </div>
     </div>
   </div>
@@ -57,8 +61,10 @@ export default {
   data() {
     return {
       logo: "w-40 h-40 my-3.5",
+      invalidMsg: "mb-5 text-red-600",
       mainContainer:
         "flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center",
+      space: "pb-8",
       loginContainer:
         "flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md",
       leftContainer:
@@ -72,13 +78,17 @@ export default {
       inputLabel: "text-sm font-semibold text-gray-500",
       inputField:
         "px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-200",
+      inputFieldInvalid:
+      "px-4 py-2 transition duration-300 border border-red-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200",
+
       forgotPasswordLink:
         "text-sm text-blue-600 hover:underline focus:text-blue-800",
       rememberCheckBox:
         "w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200",
       submitButton:
         "w-full mt-14 px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4",
-
+      submitButtonDisabled:
+        "w-full mt-14 px-4 py-2 text-lg font-semibold text-white bg-blue-400 rounded-md",
       //DATA
       email: "",
       password: "",
@@ -87,7 +97,8 @@ export default {
   props: {
     name: String,
     description: String,
-    isLoginFailed: Boolean
+    isLoginFailed: Boolean,
+    isLoading: Boolean
   },
   components: {
     Loading

@@ -4,6 +4,7 @@
         name="PGSO INVENTORY SYSTEM" 
         description="An online inventory monitoring for the Provincial Government"
         :isLoginFailed="isLoginFailed"
+        :isLoading="isLoading"
         @login="login"
        />
     </div>
@@ -15,7 +16,8 @@ import LoginForm from "../../components/Forms/LoginForm"
     export default {
         data(){
            return{
-               isLoginFailed : false
+               isLoginFailed : false,
+               isLoading : false
            }
         },
         components: {
@@ -23,17 +25,26 @@ import LoginForm from "../../components/Forms/LoginForm"
         },
         methods: {
            async login(email, password){
-             let result = await store.dispatch({
+             this.isLoginFailed = false
+             this.isLoading = true
+             let isLoginSuccess = await store.dispatch({
                  type: "getUserData",
                  email, password
              })
-             //redirect to dashboard if account founc
-             if(result){
+             //redirect to dashboard if account found
+             if(isLoginSuccess){
+                this.isLoginFailed = false
                 this.$router.push('/')
              }
+             //Re enable login button
              else{
-               this.isLoginFailed = true
+               setTimeout(() => {
+                 this.isLoading = false
+                 this.isLoginFailed = true
+               }, 3000)
+               
              }
+             
            }
         }
     }
