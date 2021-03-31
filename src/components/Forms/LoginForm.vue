@@ -12,7 +12,9 @@
       </div>
       <div :class="rightContainer">
         <h3 :class="loginHeader">ACCOUNT LOGIN</h3>
+
         <h3 v-if="isLoginFailed">Invalid Email or Password</h3>
+        <Loading/>
         <form :class="formStyle">
           <div :class="inputContainer">
             <label for="email" :class="inputLabel">Email address</label>
@@ -50,6 +52,7 @@
 </template>
 
 <script>
+import Loading from "../Loading"
 export default {
   data() {
     return {
@@ -64,7 +67,7 @@ export default {
       descriptionStyle: "mt-6 font-normal text-center text-gray-300 md:mt-0",
       rightContainer: "p-5 bg-white md:flex-1",
       loginHeader: "my-4 text-2xl font-semibold text-gray-700",
-      formStyle: "flex flex-col space-y-5 mt-14",
+      formStyle: "flex flex-col space-y-5",
       inputContainer: "flex flex-col space-y-1",
       inputLabel: "text-sm font-semibold text-gray-500",
       inputField:
@@ -85,6 +88,9 @@ export default {
     name: String,
     description: String,
     isLoginFailed: Boolean
+  },
+  components: {
+    Loading
   },
   methods: {
     login() {

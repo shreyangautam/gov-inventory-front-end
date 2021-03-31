@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '../pages/Dashboard/Dashboard'
+import NotFound from "../pages/NotFound/NotFound"
 import Login from '../pages/Login/Login'
 import store from "../store/store"
 
@@ -15,6 +16,12 @@ const routes = [
     name: 'Login',
     component: Login
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: NotFound
+  },
+
   // {
   //   path: '/about',
   //   name: 'About',
