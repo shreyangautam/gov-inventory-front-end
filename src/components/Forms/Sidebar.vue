@@ -19,10 +19,9 @@
                 </div>
             </div>
             <div :class="containerMenu">
-                <ul :class="menuList">
-                    <div class="px-6 mr-2 mb-2">
-                        <div :class="headerContainer" class="bg-secondary">
-                            <img src="../../assets/svg/dashboard.svg" alt="dashboard icon" class="h-3 w-3 mr-2">
+                <ul :class="menuList1">
+                    <div class="px-5 mr-2 mb-2">
+                        <div :class="headerContainer">
                             <div :class="dashboardHeader">Dashboard</div>
                         </div>
                     </div>
@@ -30,9 +29,24 @@
                         
                         <a :class="menuListLink">
                             <span :class="menuListIcon">
-                                <img src="../../assets/svg/home.svg" alt="home icon" class="h-3 w-3 mr-1">
+                                <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
                             </span>
-                            <span :class="menuListText">Home</span>
+                            <span :class="menuListText">Reports</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul :class="menuList2">
+                    <div class="px-5 mr-2 mb-2">
+                        <div :class="headerContainer">
+                            <div :class="managementHeader">User Management</div>
+                        </div>
+                    </div>
+                    <li class="transition duration-300">
+                        <a href="#" :class="menuListLink">
+                            <span :class="menuListIcon">
+                                <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
+                            </span>
+                            <span :class="menuListText">Account</span>
                         </a>
                   
                     </li>
@@ -57,14 +71,16 @@ export default {
             profileBadge: 
                 "px-2 py-0.5 ml-auto text-xs font-semibold tracking-wide text-white bg-red-400 rounded-md",
             containerMenu: "overflow-y-auto overflow-x-hidden flex-grow",
-            menuList: "flex flex-col py-6 space-y-1 uppercase",
+            menuList1: "flex flex-col pt-6",
+            menuList2: "flex flex-col pt-4",
             headerContainer: 
-                "flex flex-row items-center h-8 pl-4 focus:outline-none bg-blue-800 shadow-md text-gray-100 hover:text-white rounded-md border-transparent",
-            dashboardHeader: "flex font-semibold text-xs text-white my-4 font-sans tracking-widest uppercase",
+                "flex flex-row items-center h-8 focus:outline-none text-gray-100 hover:text-white rounded-md border-transparent",
+            dashboardHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
+            managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             menuListLink: 
-                "relative flex flex-row items-center h-8 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white rounded-md border-transparent",
+                "relative flex flex-row items-center h-10 pl-3 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 hover:border-blue-500 border-transparent",
             menuListIcon: "inline-flex justify-center items-center ml-4",
-            menuListText: "ml-2 font-semibold text-xs tracking-widest truncate font-sans",
+            menuListText: "ml-2 font-normal text-md truncate font-sans",
         }
     }
 }

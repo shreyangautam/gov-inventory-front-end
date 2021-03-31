@@ -3,7 +3,9 @@
     <div class="w-60 flex-shrink-0">
       <Sidebar/>
     </div>
-    <Navigation/>
+    <div class="flex flex-col w-full">
+      <Navigation/>
+    </div>
   </div>
 </template>
 
