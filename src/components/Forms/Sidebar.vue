@@ -25,8 +25,7 @@
                             <div :class="dashboardHeader">Dashboard</div>
                         </div>
                     </div>
-                    <li class="px-6 mr-2 transition duration-100">
-                        
+                    <li class="transition duration-100">
                         <a :class="menuListLink">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
@@ -48,7 +47,6 @@
                             </span>
                             <span :class="menuListText">Account</span>
                         </a>
-                  
                     </li>
                 </ul>
            </div>
