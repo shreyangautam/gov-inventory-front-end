@@ -7,9 +7,9 @@
                 </span>
             </div>
             <div :class="containerProfile" class="bg-secondary">
-              <img src="../../assets/duterte.jpg" alt="" :class="imageProfile">
+              <img src="../../assets/Me.jpg" alt="" :class="imageProfile">
                  <div :class="profileInfo">
-                    <p :class="profileName">Rodrigo Duterte</p>
+                    <p :class="profileName">Jed Dylan Lee</p>
                     <div class="flex items-center">
                         <div class="flex items-center">
                             <div class="h-2 w-2 bg-green-400 rounded-full mr-2"></div>
@@ -26,7 +26,7 @@
                             <div :class="dashboardHeader">Dashboard</div>
                         </div>
                     </div>
-                    <li class="px-6 mr-2">
+                    <li class="px-6 mr-2 transition duration-100">
                         <a href="#" :class="menuListLink">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/home.svg" alt="home icon" class="h-3 w-3 mr-1">
