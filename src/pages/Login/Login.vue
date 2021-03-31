@@ -1,7 +1,7 @@
 <template>
     <div>
        <LoginForm 
-        name="PGSO INVENTORY SYSTEM" 
+        name="INVENTORY MANAGEMENT SYSTEM" 
         description="An online inventory monitoring for the Provincial Government"
         :isLoginFailed="isLoginFailed"
         :isLoading="isLoading"
