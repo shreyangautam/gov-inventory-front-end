@@ -1,5 +1,4 @@
 <template>
-    <div :class="containerBar">
       <header :class="navigationBar">
         <div :class="navigationBox">
           <div class="flex">
@@ -31,14 +30,12 @@
           </div>
         </div>
       </header>
-    </div>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            containerBar: "flex flex-col w-full",
             navigationBar: "text-white bg-blue-500 shadow-lg sticky left-auto top-0 right-0",
             navigationBox: "h-12 px-6 flex relative items-center justify-between",
             searchBar: "px-4 transition duration-100 text-black border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-400",
