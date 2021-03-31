@@ -25,4 +25,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm run build --if-present
-    - run: cp -r /root/deploy/deploy/gov-inventory-front-end/gov-inventory-front-end /var/www/gov-inventory-front-end
+    - run: cp -r /root/deploy/deploy/gov-inventory-front-end/gov-inventory-front-end/ /var/www/
