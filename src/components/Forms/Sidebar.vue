@@ -27,14 +27,14 @@
                         </div>
                     </div>
                     <li class="px-6 mr-2 transition duration-100">
-                        <router-link to="/user-management">
+                        
                         <a :class="menuListLink">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/home.svg" alt="home icon" class="h-3 w-3 mr-1">
                             </span>
                             <span :class="menuListText">Home</span>
                         </a>
-                        </router-link>
+                  
                     </li>
                 </ul>
            </div>
