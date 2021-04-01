@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <li class="transition duration-100">
-                        <a :class="menuListLink">
+                        <a href="#" :class="menuListLink">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
                             </span>
