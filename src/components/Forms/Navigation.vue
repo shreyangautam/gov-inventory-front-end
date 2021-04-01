@@ -4,7 +4,7 @@
           <div class="flex">
              <div class="w-full flex justify-end px-2">
                     <div class="w-full sm:w-56 inline-block relative ">
-                    <input type="" name="" class="leading-snug border border-gray-300 hover:border-blue-500 hover:border-8 outline-none block w-full appearance-none bg-gray-100 text-sm text-gray-600 py-1 px-4 pl-8 rounded-lg" placeholder="Search" />
+                    <input type="" name="" class="leading-snug border border-gray-300 outline-none block w-full appearance-none bg-gray-100 text-sm text-gray-600 py-1 px-4 pl-8 rounded-lg" placeholder="Search" />
 
                     <div class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-300">
 
