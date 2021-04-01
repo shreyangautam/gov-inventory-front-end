@@ -23,6 +23,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: cd /var/www/gov-inventory-front-end
+    - run: git pull origin master
     - run: npm i
     - run: npm run build --if-present
-    - run: cp -r /root/deploy/deploy/gov-inventory-front-end/gov-inventory-front-end/ /var/www/
