@@ -37,16 +37,18 @@
                 <ul :class="menuList2">
                     <div class="px-5 mr-2 mb-2">
                         <div :class="headerContainer">
-                            <div :class="managementHeader">User Management</div>
+                            <div :class="managementHeader">Others</div>
                         </div>
                     </div>
                     <li class="transition duration-300">
+                        <router-link to="/user-management">
                         <a href="#" :class="menuListLink">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
                             </span>
-                            <span :class="menuListText">Account</span>
+                            <span :class="menuListText">User Management</span>
                         </a>
+                        </router-link>
                     </li>
                 </ul>
            </div>

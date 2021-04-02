@@ -5,6 +5,7 @@
     </div>
     <div class="flex flex-col w-full">
       <Navigation/>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
 import Sidebar from '../../components/Forms/Sidebar'
 import Navigation from '../../components/Forms/Navigation'
 import { mapState } from "vuex";
+import store from "../../store/store";
 
 export default {
   components: {
@@ -22,8 +24,10 @@ export default {
 
   computed: mapState(["userData", "token"]),
   created(){
-    console.log(this.userData)
-    console.log(this.token)
+     store.dispatch('checkToken')
+  },
+  methods(){
+    
   }
 };
 </script>

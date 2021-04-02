@@ -34,7 +34,7 @@ import LoginForm from "../../components/Forms/LoginForm"
              //redirect to dashboard if account found
              if(isLoginSuccess){
                 this.isLoginFailed = false
-                this.$router.push('/')
+                this.$router.push('/dashboard')
              }
              //Re enable login button
              else{
