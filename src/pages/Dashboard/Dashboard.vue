@@ -3,8 +3,9 @@
     <div class="w-60 flex-shrink-0">
       <Sidebar/>
     </div>
-    <div class="flex flex-col w-full">
+    <div class=" relative flex flex-col w-full">
       <Navigation/>
+      <h1 class="mt-6 ml-6 font-bold uppercase tracking-wide">Dashboard</h1>
       <router-view></router-view>
     </div>
   </div>
