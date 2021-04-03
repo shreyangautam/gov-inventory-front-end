@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen">
     <div class="w-60 flex-shrink-0">
-      <Sidebar/>
+      <Sidebar :modules="modules"/>
     </div>
     <div class=" relative flex flex-col w-full">
       <Navigation/>
@@ -18,17 +18,54 @@ import { mapState } from "vuex";
 import store from "../../store/store";
 
 export default {
+  data(){
+    return{
+      modules: [
+        {
+          id: 1,
+          name: "PBAC ACOCOUNT",
+          collapse: false,
+          specificPermissions: [
+             {
+               id: 1,
+               name: "Purchase Request"
+             },
+             {
+               id: 2,
+               name: "Second Modules"
+             }
+
+          ]
+        },
+                {
+          id: 2,
+          name: "PGSO",
+          collapse: false,
+          specificPermissions: [
+             {
+               id: 1,
+               name: "Purchase Request"
+             },
+             {
+               id: 2,
+               name: "Second Modules"
+             }
+
+          ]
+        }
+
+      ]
+    }
+  },
   components: {
     Sidebar,
     Navigation
   },
-
   computed: mapState(["userData", "token"]),
   created(){
      store.dispatch('checkToken')
   },
   methods(){
-    
   }
 };
 </script>

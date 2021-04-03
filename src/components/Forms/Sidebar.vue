@@ -22,16 +22,32 @@
                 <ul :class="menuList1">
                     <div class="px-5 mr-2 mb-2">
                         <div :class="headerContainer">
-                            <div :class="dashboardHeader">Dashboard</div>
+                            <div :class="dashboardHeader">Modules</div>
                         </div>
                     </div>
-                    <li class="transition duration-100">
-                        <a href="#" :class="menuListLink">
-                            <span :class="menuListIcon">
-                                <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
-                            </span>
-                            <span :class="menuListText">Reports</span>
-                        </a>
+                    <li class="transition duration-100" v-for="module in modules" v-bind:key="module.id">
+                        <div href="#" :class="[module.collapse ? menuListLinkActive : menuListLink1]" @click="module.collapse = !module.collapse">    
+                            <div>
+                                <span :class="menuListIcon">
+                                    <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
+                                </span>
+                                <span :class="menuListText">{{module.name}}</span>
+                            </div>
+                            <div>
+                                <font-awesome-icon class=" text-gray-300 mr-4" v-if="!module.collapse" icon="chevron-right" />
+                                <font-awesome-icon class=" text-gray-300 mr-4" v-else icon="chevron-down" />
+                            </div>
+                        </div>
+                        <ul class="" v-if="module.collapse">
+                         <li class="transition-all duration-300 ease-in" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
+                            <a href="#" class="relative flex flex-row items-center h-10 shadow-inner focus:outline-none hover:bg-tertiary text-gray-100 bg-gray-800 opacity-90  hover:text-white border-l-4 border-transparent">
+                                <span :class="menuListIcon">
+                                    <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
+                                </span>
+                                <span :class="menuListText">{{specificPermission.name}}</span>
+                            </a>
+                         </li>
+                        </ul>
                     </li>
                 </ul>
                 <ul :class="menuList2">
@@ -42,11 +58,12 @@
                     </div>
                     <li class="transition duration-300">
                         <router-link to="/user-management">
-                        <a href="#" :class="menuListLink">
+                        <a href="#" :class="menuListLink2">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
                             </span>
                             <span :class="menuListText">User Management</span>
+                         
                         </a>
                         </router-link>
                     </li>
@@ -57,7 +74,16 @@
 </template>
 
 <script>
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faChevronRight, faChevronDown)
+
 export default {
+    components: {
+       "font-awesome-icon": FontAwesomeIcon,
+    },
     data() {
         return {
             containerSidebar: "min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50",
@@ -76,11 +102,25 @@ export default {
                 "flex flex-row items-center h-8 focus:outline-none text-gray-100 hover:text-white rounded-md border-transparent",
             dashboardHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
-            menuListLink: 
-                "relative flex flex-row items-center h-10 pl-3 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 hover:border-blue-500 border-transparent",
+            menuListLink1: 
+                "relative flex flex-row justify-between select-none items-center h-10 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
+            menuListLink2: 
+            "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
+            menuListLinkActive: 
+                "relative flex flex-row justify-between select-none items-center h-10 outline-none bg-tertiary text-gray-100 text-white border-l-4",
             menuListIcon: "inline-flex justify-center items-center ml-4",
             menuListText: "ml-2 font-normal text-md truncate font-sans",
+            
+            //UI Triggers
+            collapse: true,
         }
-    }
+    
+    },
+    props: {
+        modules: Array
+    },
+    created(){
+        console.log(this.modules)
+    },
 }
 </script>
