@@ -6,7 +6,7 @@
                     <img src="../../assets/logo.png" alt="Logo" class="h-32 w-32">
                 </span>
             </div>
-            <div :class="containerProfile" class="bg-secondary">
+            <!-- <div :class="containerProfile" class="bg-secondary">
               <img src="../../assets/Me.jpg" alt="" :class="imageProfile">
                  <div :class="profileInfo">
                     <p :class="profileName">Jed Dylan Lee</p>
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div :class="containerMenu">
                 <ul :class="menuList1">
                     <div class="px-5 mr-2 mb-2">
@@ -87,7 +87,7 @@ export default {
     data() {
         return {
             containerSidebar: "min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50",
-            Sidebar: "fixed flex flex-col top-0 left-0 w-60 bg-primary h-full shadow-lg",
+            Sidebar: "fixed flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg",
             containerProfile: "flex items-center pl-6 h-20",
             imageProfile: 
                 "rounded-full h-10 w-10 flex items-center justify-center mr-3 border-2 border-green-500",
