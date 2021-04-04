@@ -1,5 +1,5 @@
 <template>
-           <div class="bg-white pb-4 px-4 rounded-sm shadow-xl w-11/12 mt-6 mx-auto border-t-4 border-blue-500">
+           <div class="bg-white pb-4 px-4 rounded-lg shadow-md w-11/12 mt-6 mx-auto">
                 <div class="flex justify-between w-full pt-6 ">
                     <p class="z-0 ml-3 text-lg font-sans font-medium tracking-wide opacity-90"> Users</p>
                     <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">

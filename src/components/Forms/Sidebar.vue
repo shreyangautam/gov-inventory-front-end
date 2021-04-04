@@ -1,7 +1,7 @@
 <template>
     <div :class="containerSidebar">
         <div :class="Sidebar">
-            <div class="flex justify-center bg-primary">
+            <div class="flex justify-center bg-primary border-b border-gray-400 mx-5 opacity-90">
                 <span class="py-4">
                     <img src="../../assets/logo.png" alt="Logo" class="h-32 w-32">
                 </span>
@@ -35,12 +35,12 @@
                             </div>
                             <div>
                                 <font-awesome-icon class=" text-gray-300 mr-4" v-if="!module.collapse" icon="chevron-right" />
-                                <font-awesome-icon class=" text-gray-300 mr-4" v-else icon="chevron-down" />
+                                <font-awesome-icon class=" text-gray-700 mr-4" v-else icon="chevron-down" />
                             </div>
                         </div>
-                        <ul class="" v-if="module.collapse">
-                         <li class="transition-all duration-300 ease-in" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
-                            <a href="#" class="relative flex flex-row items-center h-10 shadow-inner focus:outline-none hover:bg-tertiary text-gray-100 bg-gray-800 opacity-90  hover:text-white border-l-4 border-transparent">
+                        <ul class="mx-4 bg-gray-800 rounded-lg" v-if="module.collapse">
+                         <li class="" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
+                            <a href="#" :class="[module.collapse ? notActive : active]">
                                 <span :class="menuListIcon">
                                     <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
                                 </span>
@@ -103,11 +103,13 @@ export default {
             dashboardHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             menuListLink1: 
-                "relative flex flex-row justify-between select-none items-center h-10 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
+                "relative flex flex-row justify-between select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
             menuListLink2: 
-            "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
+                "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
             menuListLinkActive: 
-                "relative flex flex-row justify-between select-none items-center h-10 outline-none bg-tertiary text-gray-100 text-white border-l-4",
+                "relative flex flex-row justify-between select-none items-center h-12 outline-none bg-gray-100 text-gray-800 text-white ml-4 rounded-l-3xl",
+            active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
+            notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
             menuListIcon: "inline-flex justify-center items-center ml-4",
             menuListText: "ml-2 font-normal text-md truncate font-sans",
             
