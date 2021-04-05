@@ -31,7 +31,7 @@
       </div>
       <a
         href="#"
-        class="block px-2 py-2 mx-4 mt-2 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
+        class="block px-2.5 py-2 mx-4 mt-2 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
       > 
         <span>
         <font-awesome-icon icon="user" class="mr-2 text-sm"/> Profile
