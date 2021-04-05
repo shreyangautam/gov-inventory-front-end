@@ -20,6 +20,7 @@ module.exports = {
         primaryDark: "#0f2846",
         secondary: "#28425f",
         tertiary: "#586c83",
+        modal: '#000005',
       }),
     },
   },

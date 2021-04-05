@@ -1,12 +1,91 @@
 <template>
 <div class="flex flex-row justify-between px-3 mb-3">
       <div>
+        <!-- ADD USER BUTTON -->
         <button
           class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"
+          @click="openModal = true" id="show-modal"
         >
           <Icon class="mt-1" :icon="config.buttonIcon"/>
           <span>&nbsp;{{config.buttonText}}</span>
         </button>
+        <!-- MODAL -->
+        <modal v-if="openModal" @close="openModal = false">
+           <transition name="modal">
+            <div class="modal-mask">
+              <div class="modal-wrapper">
+                <div class="modal-container">
+
+                  <div class="h-8 w-full flex justify-start items-center text-gray-900 border-b border-gray-200 pb-4">
+                      <div class="">
+                      <span class="text-md font-medium font-custom">ADD USER</span>
+                      </div>
+                  </div>
+
+                  <div class="w-full h-64 mt-4">
+                    <div>
+                        <div class="flex flex-col -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">First name</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Jed Dylan">
+                                </div>
+                            </div>
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Middle name</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Manjares">
+                                </div>
+                            </div>
+                            <div class="w-full px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Last name</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Lee">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                           <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Email</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="leedylan0918@gmail.com">
+                                </div>
+                            </div>
+                            <div class="w-1/2 px-3 mb-5">
+                                <label for="" class="text-xs font-semibold px-1">Contact Number</label>
+                                <div class="flex">
+                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="(63+) XXX-XXX-XXXX">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end gap-4 mt-3">
+                            <button
+                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-red-600 rounded shadow hover:shadow-lg hover:bg-red-500 focus:outline-none"
+                              @click="onCloseModal"
+                            >
+                              <span>Cancel</span>
+                            </button>
+                            <button
+                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"
+                            >
+                              <span>Add User</span>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+
+              
+                </div>
+              </div>
+            </div>
+          </transition>
+
+        </modal>
       </div>
       <div class="mt-1.5">
         <span class="text-sm text-gray-500 select-none"
@@ -35,6 +114,16 @@
 
 import Icon from "../../assets/Icons"
     export default {
+      data() {
+        return {
+          openModal: false,
+        }
+      },
+      methods: {
+        onCloseModal(event) {
+          this.openModal = !this.openModal
+        }
+      },
        props: {
           config: Object
        },
@@ -44,6 +133,36 @@ import Icon from "../../assets/Icons"
     }
 </script>
 
-<style>
-
+<style scoped>
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  transition: opacity all 0.3s ease;
+}
+.modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.modal-container {
+  width: 550px;
+  height: 500px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+}
+.modal-header {
+  margin-top: 0;
+}
+.modal-body {
+  margin: 20px 0;
+}
 </style>
