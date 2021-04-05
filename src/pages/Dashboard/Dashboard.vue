@@ -3,10 +3,9 @@
     <div class="w-64 flex-shrink-0">
       <Sidebar :modules="modules"/>
     </div>
-    <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
-      <div class="relative flex flex-col w-full bg-gray-100 rounded-3xl h-screen">
+    <div class="relative flex flex-col w-full bg-primary  py-5 ">
+      <div class="relative flex flex-col w-full bg-gray-100 p-8 rounded-3xl">
           <Navigation/>
-          <h1 class="mt-6 ml-11 text-lg font-medium truncate uppercase">Dashboard</h1>
            <router-view></router-view>
       </div>
     </div>
