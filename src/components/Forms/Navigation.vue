@@ -23,9 +23,7 @@
                   <font-awesome-icon class="text-lg text-gray-500 mx-2" icon="bell"/>
                 </div>
                 <div class="flex items-center h-12 w-12">
-                    <span class="cursor-pointer">
-                    <img src="../../assets/Me.jpg" alt="" class="rounded-full flex items-center justify-center border-2 border-gray-300">
-                    </span>
+                  <ProfileMenu/>
                 </div>
               </div>
             </div>
@@ -33,6 +31,7 @@
 </template>
 
 <script>
+import ProfileMenu from '../Dropdown/ProfileMenu'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBell } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
@@ -42,6 +41,7 @@ library.add(faBell)
 export default {
     props: Array,
     components: {
+      ProfileMenu,
       "font-awesome-icon": FontAwesomeIcon,
     }
 }

@@ -4,6 +4,12 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    borderColor: (theme) => ({
+      ...theme('colors'),
+      'primary': '#28425f',
+      'secondary': '#0f2846',
+     }),
+
     fontFamily: {
       custom: ['Roboto', 'sans-serif']
     },
