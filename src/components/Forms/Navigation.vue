@@ -1,9 +1,9 @@
 <template>
      <div class=" w-11/12 flex flex-row justify-between items-center border-b border-gray-300 h-14 mt-3 mx-auto">
-            <div class="">
-              <a href=""><span class="font-normal">User Management</span></a>
+            <div class="flex items-center sm:flex">
+              <a href=""><span class="font-normal font-custom">User Management</span></a>
               <font-awesome-icon class="text-xs text-gray-400 mx-2" icon="chevron-right"/>
-              <a href=""><span class="font-medium text-blue-600">Dashboard</span></a>
+              <a href=""><span class="font-medium text-blue-600 font-custom">Dashboard</span></a>
             </div>
             <div>
               <div class="flex justify-between items-center w-full gap-2">
@@ -23,7 +23,9 @@
                   <font-awesome-icon class="text-lg text-gray-500 mx-2" icon="bell"/>
                 </div>
                 <div class="flex items-center h-12 w-12">
+                    <span class="cursor-pointer">
                     <img src="../../assets/Me.jpg" alt="" class="rounded-full flex items-center justify-center border-2 border-gray-300">
+                    </span>
                 </div>
               </div>
             </div>
@@ -32,17 +34,13 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faBell } from '@fortawesome/free-solid-svg-icons'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faChevronRight, faBell)
+library.add(faBell)
 
 export default {
-    data() {
-        return {
-
-        }
-    },
+    props: Array,
     components: {
       "font-awesome-icon": FontAwesomeIcon,
     }

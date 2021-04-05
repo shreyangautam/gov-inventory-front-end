@@ -1,9 +1,9 @@
 <template>
     <div :class="containerSidebar">
         <div :class="Sidebar">
-            <div class="flex justify-center bg-primary border-b border-gray-400 mx-5 opacity-90">
+            <div class="flex justify-center bg-primary border-b border-gray-400 mx-5">
                 <span class="py-4">
-                    <img src="../../assets/logo.png" alt="Logo" class="h-32 w-32">
+                    <img src="../../assets/logo.png" alt="Logo" :class="provincialLogo">
                 </span>
             </div>
             <!-- <div :class="containerProfile" class="bg-secondary">
@@ -25,8 +25,8 @@
                             <div :class="dashboardHeader">Modules</div>
                         </div>
                     </div>
-                    <li class="transition duration-100" v-for="module in modules" v-bind:key="module.id">
-                        <div href="#" :class="[module.collapse ? menuListLinkActive : menuListLink1]" @click="module.collapse = !module.collapse">    
+                    <li class="" v-for="module in modules" v-bind:key="module.id">
+                        <div href="#" class="transition duration-300 ease-in-out" :class="[module.collapse ? menuListLinkActive : menuListLink1]" @click="module.collapse = !module.collapse">    
                             <div>
                                 <span :class="menuListIcon">
                                     <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
@@ -38,7 +38,7 @@
                                 <font-awesome-icon class=" text-gray-700 mr-4" v-else icon="chevron-down" />
                             </div>
                         </div>
-                        <ul class="mx-4 bg-gray-800 rounded-lg" v-if="module.collapse">
+                        <ul class="mx-4 mt-2 inset-y-2 bg-primaryDark rounded-lg" v-if="module.collapse">
                          <li class="" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
                             <a href="#" :class="[module.collapse ? notActive : active]">
                                 <span :class="menuListIcon">
@@ -88,6 +88,7 @@ export default {
         return {
             containerSidebar: "min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50",
             Sidebar: "fixed flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg",
+            provincialLogo: "h-32 w-32",
             containerProfile: "flex items-center pl-6 h-20",
             imageProfile: 
                 "rounded-full h-10 w-10 flex items-center justify-center mr-3 border-2 border-green-500",
@@ -100,18 +101,18 @@ export default {
             menuList2: "flex flex-col pt-4",
             headerContainer: 
                 "flex flex-row items-center h-8 focus:outline-none text-gray-100 hover:text-white rounded-md border-transparent",
-            dashboardHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
+            dashboardHeader: "select-none flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-custom tracking-wide uppercase",
             managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             menuListLink1: 
                 "relative flex flex-row justify-between select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
             menuListLink2: 
                 "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
             menuListLinkActive: 
-                "relative flex flex-row justify-between select-none items-center h-12 outline-none bg-gray-100 text-gray-800 text-white ml-4 rounded-l-3xl",
+                "relative flex flex-row justify-between select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
             active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
             notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
             menuListIcon: "inline-flex justify-center items-center ml-4",
-            menuListText: "ml-2 font-normal text-md truncate font-sans",
+            menuListText: "ml-2 font-normal text-md truncate font-custom",
             
             //UI Triggers
             collapse: true,

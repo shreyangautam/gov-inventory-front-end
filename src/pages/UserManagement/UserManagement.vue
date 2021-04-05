@@ -1,7 +1,7 @@
 <template>
            <div class="bg-white pb-4 px-4 rounded-lg shadow-md w-11/12 mt-6 mx-auto">
                 <div class="flex justify-between w-full pt-6 ">
-                    <p class="z-0 ml-3 text-lg font-sans font-medium tracking-wide opacity-90"> Users</p>
+                    <p class="z-0 ml-3 text-lg font-custom font-medium tracking-wide opacity-90"> Users</p>
                     <svg width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.4">
                     <circle cx="2.19796" cy="1.80139" r="1.38611" fill="#222222"/>
@@ -10,9 +10,10 @@
                     </g>
                     </svg>
                 </div>
-                <div class="w-full flex justify-end px-2 mt-2">
+                
+                <div class="w-full flex justify-between px-2 mt-4">
                     <div class="w-full sm:w-64 inline-block relative ">
-                        <input type="" name="" class="leading-snug border z-0 border-gray-300 outline-none block w-full appearance-none bg-white text-sm text-gray-600 py-1 px-4 pl-8 rounded-md" placeholder="Search" />
+                        <input type="" name="" class="leading-snug border z-0 border-gray-300 outline-none block w-full appearance-none bg-white text-sm text-gray-600 h-8 py-1 px-4 pl-8 rounded-2xl" placeholder="Search" />
 
                         <div class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-300">
 
@@ -21,48 +22,49 @@
                             </svg>
                         </div>
                     </div>
+                    <button class="px-4 py-1.5 bg-green-500 border text-white text-sm rounded-full transition duration-300 hover:bg-green-600 hover:text-white focus:outline-none"><font-awesome-icon icon="user-plus"/> Add User</button>
                 </div>
 
                 <div class="overflow-x-auto mt-6">
                 <table class="table-auto border-collapse w-full text-left">
                     <thead>
-                    <tr class="rounded-lg text-sm font-medium text-gray-700" style="font-size: 0.9674rem">
-                        <th class="px-6 py-2 bg-gray-200 " style="background-color:#f8f8f8">Firstname</th>
-                        <th class="px-6 py-2 bg-gray-200 " style="background-color:#f8f8f8">Middlename</th>
-                        <th class="px-6 py-2 bg-gray-200 " style="background-color:#f8f8f8">Surname</th>
-                        <th class="px-12 py-2 " style="background-color:#f7f8f8">Email</th>
-                        <th class="px-6 py-2" style="background-color:#f7f8f8"></th>
+                    <tr class="rounded-lg text-sm font-medium font-custom text-gray-700" style="font-size: 0.9674rem">
+                        <th class="px-8 py-2 bg-gray-200 " style="background-color:#f8f8f8">Firstname</th>
+                        <th class="px-8 py-2 bg-gray-200 " style="background-color:#f8f8f8">Middlename</th>
+                        <th class="px-8 py-2 bg-gray-200 " style="background-color:#f8f8f8">Surname</th>
+                        <th class="px-16 py-2 " style="background-color:#f7f8f8">Email</th>
+                        <th class="px-8 py-2" style="background-color:#f7f8f8"></th>
                     </tr>
                     </thead>
-                    <tbody class="text-sm font-normal text-gray-700">
+                    <tbody class="text-sm font-normal font-custom text-gray-700">
                     <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
-                        <td class="px-6 py-4">Jephunneh</td>
-                        <td class="px-6 py-4">Borja</td>
-                        <td class="px-6 py-4">Viernes</td>
-                        <td class="px-12 py-4">jephv4@gmail.com</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
-                            <button class="px-5 py-2 bg-blue-500 border text-white rounded transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">Edit</button>
-                            <button class="px-5 py-2 bg-red-500 border text-white rounded transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">Delete</button>
+                        <td class="px-8 py-4">Jephunneh</td>
+                        <td class="px-8 py-4">Borja</td>
+                        <td class="px-8 py-4">Viernes</td>
+                        <td class="px-16 py-4">jephv4@gmail.com</td>
+                        <td class="px-8 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-3 py-2 bg-blue-500 border text-white text-center rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none"><font-awesome-icon icon="edit" class="text-md"/></button>
+                            <button class="px-3 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none"><font-awesome-icon icon="trash-alt" class="text-md"/></button>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-100 border-b border-gray-200 py-4">
-                        <td class="px-6 py-4">Jed Dylan</td>
-                        <td class="px-6 py-4">Manjares</td>
-                        <td class="px-6 py-4">Lee</td>
-                        <td class="px-12 py-4">leedylan0918@gmail.com</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
-                            <button class="px-5 py-2 bg-blue-500 border text-white rounded transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">Edit</button>
-                            <button class="px-5 py-2 bg-red-500 border text-white rounded transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">Delete</button>
+                        <td class="px-8 py-4">Jed Dylan</td>
+                        <td class="px-8 py-4">Manjares</td>
+                        <td class="px-8 py-4">Lee</td>
+                        <td class="px-16 py-4">leedylan0918@gmail.com</td>
+                        <td class="px-8 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-3 py-2 bg-blue-500 border text-white text-center rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none"><font-awesome-icon icon="edit" class="text-md"/></button>
+                            <button class="px-3 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none"><font-awesome-icon icon="trash-alt" class="text-md"/></button>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-100 border-b border-gray-200">
-                        <td class="px-6 py-4">Richard</td>
-                        <td class="px-6 py-4">Pardo</td>
-                        <td class="px-6 py-4">Gigantone</td>
-                        <td class="px-12 py-4">chard19951002@gmail.com</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
-                            <button class="px-5 py-2 bg-blue-500 border text-white rounded transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">Edit</button>
-                            <button class="px-5 py-2 bg-red-500 border text-white rounded transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">Delete</button>
+                        <td class="px-8 py-4">Richard</td>
+                        <td class="px-8 py-4">Pardo</td>
+                        <td class="px-8 py-4">Gigantone</td>
+                        <td class="px-16 py-4">chard19951002@gmail.com</td>
+                        <td class="px-8 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-3 py-2 bg-blue-500 border text-white text-center rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none"><font-awesome-icon icon="edit" class="text-md"/></button>
+                            <button class="px-3 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none"><font-awesome-icon icon="trash-alt" class="text-md"/></button>
                         </td>
                     </tr>
                     </tbody>
@@ -70,7 +72,7 @@
                 </div>
                 <div class="sm:flex-1 sm:flex sm:items-center sm:justify-between mt-6 work-sans">
                     <div>
-                        <p class="text-sm leading-5 text-blue-700">
+                        <p class="text-sm font-custom leading-5 text-blue-700">
                             Showing
                             <span class="font-medium">1</span>
                             to
@@ -114,9 +116,17 @@
 </template>
 
 <script>
-    export default {
-        
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserPlus, faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+library.add(faUserPlus, faEdit, faTrashAlt)
+
+export default {
+    components: {
+      "font-awesome-icon": FontAwesomeIcon,
     }
+}
 </script>
 
 <style scoped>

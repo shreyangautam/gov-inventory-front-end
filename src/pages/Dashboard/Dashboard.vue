@@ -6,7 +6,7 @@
     <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
       <div class="relative flex flex-col w-full bg-gray-100 rounded-3xl h-screen">
           <Navigation/>
-          <h1 class="mt-6 ml-11 font-bold uppercase tracking-wide">Dashboard</h1>
+          <h1 class="mt-6 ml-11 text-lg font-medium truncate uppercase">Dashboard</h1>
            <router-view></router-view>
       </div>
     </div>
@@ -25,7 +25,7 @@ export default {
       modules: [
         {
           id: 1,
-          name: "PBAC ACOCOUNT",
+          name: "PBAC Account",
           collapse: false,
           specificPermissions: [
              {
@@ -56,7 +56,8 @@ export default {
           ]
         }
 
-      ]
+      ],
+
     }
   },
   components: {
