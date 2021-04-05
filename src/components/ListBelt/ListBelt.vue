@@ -1,5 +1,5 @@
 <template>
-<div class="flex flex-row justify-between px-3">
+<div class="flex flex-row justify-between px-3 mb-3">
       <div>
         <button
           class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"

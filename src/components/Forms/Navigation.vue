@@ -1,7 +1,7 @@
 <template>
      <div class=" w-full flex flex-row justify-between items-center border-b border-gray-300 h-14 px-5">
             <div class="">
-              <a href=""><span class="font-normal">User Management</span></a>
+              <a href=""><span class="font-normal font-custom">User Management</span></a>
               <font-awesome-icon class="text-xs text-gray-400 mx-2" icon="chevron-right"/>
               <a href=""><span class="font-medium text-blue-600 font-custom">Dashboard</span></a>
             </div>

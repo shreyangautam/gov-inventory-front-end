@@ -1,7 +1,7 @@
 <template>
 <div class="transition-all px-3 duration-150 flex w-full py-3 lg:w-1/2 xl:w-1/3">
         <div
-          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl"
+          class="flex flex-col items-stretch min-h-full pb-4 mb-6 transition-all duration-150 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1"
         >
           <div class="md:flex-shrink-0">
             <img

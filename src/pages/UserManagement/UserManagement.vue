@@ -1,5 +1,5 @@
 <template>
-<span class="antialiased text-gray-700 font-semibold text-lg ml-3">Manage Users</span>
+<span class="antialiased text-gray-700 font-medium font-custom text-lg ml-3 mt-4">Manage Users</span>
 <UserList/>
 </template>
 
