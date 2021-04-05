@@ -23,7 +23,7 @@
       v-click-away="onClickAway"
       class="absolute right-14 mt-2 py-4 w-56 bg-primary rounded-md shadow-2xl z-20"
     >
-      <div class="px-2 mx-4 pb-4 border-b border-primary">
+      <div class="px-6 pb-4 border-b border-primary">
           <a href="" class="flex flex-col">
             <span class="text-white font-medium tracking-wider font-custom text-sm mx uppercase">Jed Dylan Lee</span>
             <span class="text-white font-custom opacity-80 text-xs">Jr. Frontend Developer</span>
@@ -47,7 +47,7 @@
       </a>
       <a
         href="#"
-        class="block px-2 mx-4 pt-2 my-1 text-sm capitalize text-gray-300 font-custom hover:underline hover:text-white border-t border-primary"
+        class="block px-6 pt-2 my-1 text-sm capitalize text-gray-300 font-custom hover:underline hover:text-white border-t border-primary"
       >
         <span class="flex pt-1 ml-1">
         <logoutIcon icon="box-right-arrow" class="mr-2 text-sm"/> Logout
