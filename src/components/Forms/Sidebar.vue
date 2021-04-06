@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <li class="" v-for="module in modules" v-bind:key="module.id">
-                        <div href="#" class="transition duration-300 ease-in-out" :class="[module.collapse ? menuListLinkActive : menuListLink1]" @click="module.collapse = !module.collapse">    
+                        <div href="#" class="transition duration-300 ease-in-out" :class="[module.collapse ? menuListLinkActive1 : menuListLink1]" @click="module.collapse = !module.collapse">    
                             <div>
                                 <span :class="menuListIcon">
                                     <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
@@ -58,7 +58,7 @@
                     </div>
                     <li class="transition duration-300">
                         <router-link to="/user-management">
-                        <a href="#" :class="menuListLink2">
+                        <a href="#" :class="[click ? menuListLinkActive2 : menuListLink2]" @click="click = true">
                             <span :class="menuListIcon">
                                 <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
                             </span>
@@ -106,9 +106,11 @@ export default {
             menuListLink1: 
                 "relative flex flex-row justify-between select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
             menuListLink2: 
-                "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
-            menuListLinkActive: 
+                "relative flex flex-row select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
+            menuListLinkActive1: 
                 "relative flex flex-row justify-between select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
+            menuListLinkActive2: 
+                "relative flex flex-row select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
             active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
             notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
             menuListIcon: "inline-flex justify-center items-center ml-4",
@@ -116,6 +118,7 @@ export default {
             
             //UI Triggers
             collapse: true,
+            click: false,
         }
     
     },
