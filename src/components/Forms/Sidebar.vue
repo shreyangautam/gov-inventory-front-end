@@ -59,11 +59,7 @@
                     <li class="transition duration-300">
                         <router-link to="/user-management">
                         <a href="#" :class="[click ? menuListLinkActive2 : menuListLink2]" @click="click = true">
-                            <span :class="menuListIcon">
-                                <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
-                            </span>
-                            <span :class="menuListText">User Management</span>
-                         
+                            <span :class="menuListText"><font-awesome-icon icon='user-cog' class="ml-2 mr-3"/>User Management</span>
                         </a>
                         </router-link>
                     </li>
@@ -75,10 +71,10 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronDown, faUserCog } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faChevronRight, faChevronDown)
+library.add(faChevronRight, faChevronDown, faUserCog)
 
 export default {
     components: {
