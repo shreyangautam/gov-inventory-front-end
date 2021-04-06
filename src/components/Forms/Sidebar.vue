@@ -34,8 +34,8 @@
                                 <span :class="menuListText">{{module.name}}</span>
                             </div>
                             <div>
-                                <font-awesome-icon class=" text-gray-300 mr-4" v-if="!module.collapse" icon="chevron-right" />
-                                <font-awesome-icon class=" text-gray-700 mr-4" v-else icon="chevron-down" />
+                                <font-awesome-icon class=" text-gray-300 mr-6" v-if="!module.collapse" icon="chevron-right" />
+                                <font-awesome-icon class=" text-gray-700 mr-6" v-else icon="chevron-down" />
                             </div>
                         </div>
                         <ul class="mx-4 mt-2 inset-y-2 bg-primaryDark rounded-lg" v-if="module.collapse">
@@ -112,7 +112,7 @@ export default {
             active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
             notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
             menuListIcon: "inline-flex justify-center items-center ml-4",
-            menuListText: "ml-2 font-normal text-md truncate font-custom",
+            menuListText: "ml-2 font-normal text-md truncate",
             
             //UI Triggers
             collapse: true,

@@ -3,7 +3,7 @@
       <div>
         <!-- ADD USER BUTTON -->
         <button
-          class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"
+          class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow-md hover:shadow-lg hover:bg-blue-700 focus:outline-none"
           @click="openModal = true" id="show-modal"
         >
           <Icon class="mt-1" :icon="config.buttonIcon"/>
@@ -29,21 +29,21 @@
                                 <label for="" class="text-xs font-semibold px-1">First name</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Jed Dylan">
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Jed Dylan">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Middle name</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Manjares">
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Manjares">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Last name</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Lee">
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Lee">
                                 </div>
                             </div>
                         </div>
@@ -52,26 +52,26 @@
                                 <label for="" class="text-xs font-semibold px-1">Email</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="leedylan0918@gmail.com">
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="leedylan0918@gmail.com">
                                 </div>
                             </div>
                             <div class="w-1/2 px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Contact Number</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="(63+) XXX-XXX-XXXX">
+                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="(63+) XXX-XXX-XXXX">
                                 </div>
                             </div>
                         </div>
                         <div class="flex justify-end gap-4 mt-3">
                             <button
-                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-red-600 rounded shadow hover:shadow-lg hover:bg-red-500 focus:outline-none"
+                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-red-500 rounded shadow hover:shadow-lg hover:bg-red-400 focus:outline-none"
                               @click="onCloseModal"
                             >
                               <span>Cancel</span>
                             </button>
                             <button
-                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"
+                              class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-green-600 rounded shadow hover:shadow-lg hover:bg-green-500 focus:outline-none"
                             >
                               <span>Add User</span>
                             </button>
@@ -97,11 +97,11 @@
           <input
             type="text"
             id="password"
-            class="w-full pl-3 pr-10 py-2 border-2 border-gray-200 rounded-xl hover:border-gray-300 focus:outline-none focus:text-gray-500 focus:border-blue-800 transition-colors"
+            class="w-full pl-3 pr-10 py-2 shadow-sm hover:shadow-md rounded-lg hover:border-gray-300 focus:outline-none focus:text-gray-500 focus:border-blue-800 transition-colors"
             placeholder="Search..."
           />
           <button
-            class="block w-7 h-7 text-center text-xl leading-0 absolute top-2 right-2 text-gray-400 focus:outline-none hover:text-gray-600 transition-colors"
+            class="block w-7 h-7 text-center text-xl leading-0 absolute top-1 right-2 text-gray-400 focus:outline-none hover:text-gray-600 transition-colors"
           >
             <Icon icon="search"/>
           </button>
