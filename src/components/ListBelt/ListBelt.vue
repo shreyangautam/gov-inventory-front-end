@@ -26,44 +26,44 @@
                     <div>
                         <div class="flex flex-col -mx-3">
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">First name</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Jed Dylan">
+                                <label for="" class="text-sm font-semibold px-1">First name</label>
+                                <div class="flex mt-1">
+                    
+                                    <input type="text" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Jed Dylan">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Middle name</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Manjares">
+                                <label for="" class="text-sm font-semibold px-1">Middle name</label>
+                                <div class="flex mt-1">
+                        
+                                    <input type="text" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Manjares">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Last name</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Lee">
+                                <label for="" class="text-sm font-semibold px-1">Last name</label>
+                                <div class="flex mt-1">
+                                    
+                                    <input type="text" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Lee">
                                 </div>
                             </div>
                         </div>
                         <div class="flex -mx-3">
                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Email</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="leedylan0918@gmail.com">
+                                <label for="" class="text-sm font-semibold px-1">Email</label>
+                                <div class="flex mt-1">
+                                   
+                                    <input type="text" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="leedylan0918@gmail.com">
                                 </div>
                             </div>
                             <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-xs font-semibold px-1">Contact Number</label>
-                                <div class="flex">
-                                    <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input type="text" class="w-full -ml-10 pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="(63+) XXX-XXX-XXXX">
+                                <label for="" class="text-sm font-semibold px-1">Contact Number</label>
+                                <div class="flex mt-1">
+                        
+                                    <input type="text" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="(63+) XXX-XXX-XXXX">
                                 </div>
                             </div>
                         </div>
-                        <div class="flex justify-end gap-4 mt-3">
+                        <div class="flex justify-end gap-4 mt-1">
                             <button
                               class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-red-500 rounded shadow hover:shadow-lg hover:bg-red-400 focus:outline-none"
                               @click="onCloseModal"
