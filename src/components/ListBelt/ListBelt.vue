@@ -26,20 +26,20 @@
                         <Loading/>
                         <div class="flex flex-col -mx-3">
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-sm font-semibold px-1">First name</label>
+                                <label for="" class="text-sm font-semibold px-1">First name <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
                                     <input type="text" maxlength="15" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Jed Dylan">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-sm font-semibold px-1">Middle name</label>
+                                <label for="" class="text-sm font-semibold px-1">Middle name <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
                         
                                     <input type="text" maxlength="15" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Manjares">
                                 </div>
                             </div>
                             <div class="w-full px-3 mb-5">
-                                <label for="" class="text-sm font-semibold px-1">Last name</label>
+                                <label for="" class="text-sm font-semibold px-1">Last name <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
                                     
                                     <input type="text" maxlength="15" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Lee">
@@ -48,14 +48,14 @@
                         </div>
                         <div class="flex -mx-3">
                            <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-sm font-semibold px-1">Email</label>
+                                <label for="" class="text-sm font-semibold px-1">Email <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
                                    
                                     <input type="email" maxlength="23" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="leedylan0918@gmail.com">
                                 </div>
                             </div>
                             <div class="w-1/2 px-3 mb-5">
-                                <label for="" class="text-sm font-semibold px-1">Contact Number</label>
+                                <label for="" class="text-sm font-semibold px-1">Contact Number <span class="text-red-500">*</span></label>
                                 <div class="flex mt-1">
                         
                                     <input type="text" maxlength="11" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="(63+) XXX-XXX-XXXX">
