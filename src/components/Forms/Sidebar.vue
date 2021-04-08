@@ -2,7 +2,7 @@
     <div :class="containerSidebar">
         <div :class="Sidebar">
             <div class="flex justify-center bg-primary border-b border-primary mx-5">
-                <span class="py-4">
+                <span class="py-8">
                     <img src="../../assets/logo.png" alt="Logo" :class="provincialLogo">
                 </span>
             </div>

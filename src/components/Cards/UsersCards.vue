@@ -18,8 +18,7 @@
             <div>
                <MenuDropdown/>  
             </div>
-            
-            
+
             <button
               class="inline-block px-3 py-0 text-xs font-medium leading-6 text-center text-green-500 uppercase transition bg-transparent border-2 border-green-500 rounded-full"
             >
@@ -67,7 +66,7 @@ import Icons from "../../assets/Icons"
         components:{
            'emailIcon': EMAIL_SVG,
            'phoneIcon': PHONE_SVG,
-           MenuDropdown
+           MenuDropdown,
         }
 
     }

@@ -52,7 +52,7 @@ export default {
    },
     components: {
        Icon,
-       'menuIcon': MENU_DOTS
+       'menuIcon': MENU_DOTS,
    },
    methods:{
       onClickAway(event) {

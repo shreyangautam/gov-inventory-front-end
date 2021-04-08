@@ -4,7 +4,7 @@
         <!-- ADD USER BUTTON -->
         <button
           class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow-md hover:shadow-lg hover:bg-blue-700 focus:outline-none"
-          @click="openModal = true" id="show-modal"
+          @click="openModal = !openModal" id="show-modal"
         >
           <Icon class="mt-1" :icon="config.buttonIcon"/>
           <span>&nbsp;{{config.buttonText}}</span>
@@ -15,20 +15,19 @@
             <div class="modal-mask">
               <div class="modal-wrapper">
                 <div class="modal-container">
-
+                  <PopupModal/>
                   <div class="h-8 w-full flex justify-start items-center text-gray-900 border-b border-gray-200 pb-4">
                       <div class="">
                       <span class="text-md font-medium font-custom">ADD USER</span>
                       </div>
                   </div>
-
-                  <div class="w-full h-64 mt-4">
+                  <div class="w-full mt-4">
                     <div>
+                        <Loading/>
                         <div class="flex flex-col -mx-3">
                             <div class="w-full px-3 mb-5">
                                 <label for="" class="text-sm font-semibold px-1">First name</label>
                                 <div class="flex mt-1">
-                    
                                     <input type="text" maxlength="15" class="w-full pl-5 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-blue-500" placeholder="Jed Dylan">
                                 </div>
                             </div>
@@ -111,7 +110,8 @@
 </template>
 
 <script>
-
+import Loading from '../Loading'
+import PopupModal from '../../components/Alert/SuccessAlert'
 import Icon from "../../assets/Icons"
     export default {
       data() {
@@ -128,7 +128,9 @@ import Icon from "../../assets/Icons"
           config: Object
        },
        components:{
-           Icon
+           Icon,
+           PopupModal,
+           Loading
        },
     }
 </script>
@@ -150,8 +152,9 @@ import Icon from "../../assets/Icons"
   vertical-align: middle;
 }
 .modal-container {
+  position: relative;
   width: 550px;
-  height: 500px;
+  height: auto;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
