@@ -13,7 +13,8 @@ export const API_REQUEST = async (type, endpoint, data, params, headers) => {
          const GET_REQUEST = await axios({
              method: type,
              url: `${API_RESOURCE}${endpoint}`,
-             params: params ? {...params} : ''
+             params: params ? {...params} : '',
+             headers: headers ? headers : ''
          })
          let { data } = GET_REQUEST
          return data
@@ -45,6 +46,6 @@ export const API_REQUEST = async (type, endpoint, data, params, headers) => {
         return PUT_REQUEST
       }
     } catch (error) {
-      console.log(error)
+      return error.response.status
     }
 }

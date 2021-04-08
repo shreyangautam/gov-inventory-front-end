@@ -17,6 +17,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
     "vue": "^3.0.0",
     "vue-router": "^4.0.5",
+    "vue-svg-loader": "^0.16.0",
     "vue3-click-away": "^1.1.0",
     "vuex": "^4.0.0-0"
   },

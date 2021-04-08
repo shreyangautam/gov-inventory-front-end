@@ -3,7 +3,7 @@
     <div class="w-64 flex-shrink-0">
       <Sidebar :modules="modules"/>
     </div>
-    <div class="relative flex flex-col w-full bg-primary  py-5 ">
+    <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
       <div class="relative flex flex-col w-full bg-gray-100 p-8 rounded-3xl">
           <Navigation/>
            <router-view></router-view>

@@ -60,7 +60,7 @@
                         <router-link to="/user-management">
                         <a href="#" :class="menuListLink2">
                             <span :class="menuListIcon">
-                                <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
+                                <img src="../../assets/svg/management.svg" alt="home icon" class="h-5 w-5 mr-1">
                             </span>
                             <span :class="menuListText">User Management</span>
                          
