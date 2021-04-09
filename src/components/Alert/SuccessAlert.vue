@@ -5,7 +5,7 @@
                 <div :class="messageIcon">
                     <font-awesome-icon icon="check-circle"/>
                 </div>
-                <div class="bg-clip-text font-bold text-transparent bg-gradient-to-r from-red-400 to-blue-500">Successfully Added</div>
+                <div class="bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-500">Successfully Added</div>
             </div>
         </div>
     </transition>
@@ -26,7 +26,7 @@ export default {
 
     data: () => ({
         messageIcon: "text-center text-6xl text-green-500 mb-5",
-        isVisible: false,
+        isVisible: true,
     }),
 
     methods: {
@@ -68,7 +68,7 @@ export default {
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 480px;
     margin-left: auto;
