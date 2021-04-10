@@ -5,7 +5,7 @@
                 <div :class="messageIcon">
                     <font-awesome-icon icon="check-circle"/>
                 </div>
-                <div class="bg-clip-text font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-500">Successfully Added</div>
+                <div class="bg-clip-text text-lg font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-500">Successfully Added</div>
                 <div>
                     <button class="px-6 py-1 mt-4 text-sm font-semibold leading-6 text-green-500 uppercase hover:transition-colors duration-150 ease-in border border-green-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-green-500 hover:text-white focus:outline-none">Ok</button>
                 </div>
@@ -76,7 +76,7 @@ export default {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 7%;
+    padding: 2rem 6.5%;
     text-align: center;
 }
 </style>
