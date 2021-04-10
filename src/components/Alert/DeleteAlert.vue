@@ -5,8 +5,12 @@
                 <div :class="messageIcon">
                     <font-awesome-icon icon="user-slash"/>
                 </div>
-                <div class="bg-clip-text font-bold text-transparent bg-gradient-to-r from-red-400 to-blue-500">
-                    Are you sure you wanted to delete this user?
+                <div class="bg-clip-text font-bold text-transparent text-sm bg-gradient-to-r from-red-400 to-blue-500">
+                    delete this user?
+                </div>
+                <div class="flex gap-2">
+                    <button class="px-4 py-1 mt-4 text-xs font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none">Yes</button>
+                    <button class="px-4 py-1 mt-4 text-xs font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none">No</button>
                 </div>
             </div>
         </div>
@@ -27,7 +31,7 @@ export default {
     },
 
     data: () => ({
-        messageIcon: "text-center text-6xl text-red-500 mb-5",
+        messageIcon: "text-center text-4xl text-red-500 mb-5",
         isVisible: true,
     }),
 }
@@ -60,11 +64,11 @@ export default {
     display: flex;
     flex-direction: column;
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 7%;
+    margin: 0px auto;
+    padding: 1.5rem 9%;
+    align-items: center;
 }
 </style>

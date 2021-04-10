@@ -16,9 +16,10 @@
           >
             
             <div>
-               <MenuDropdown/>  
-            </div>
-
+               <MenuDropdown/> 
+               <DeleteAlert/>
+            </div> 
+            
             <button
               class="inline-block px-3 py-0 text-xs font-medium leading-6 text-center text-green-500 uppercase transition bg-transparent border-2 border-green-500 rounded-full"
             >
@@ -59,6 +60,7 @@
 </template>
 
 <script>
+import DeleteAlert from '../../components/Alert/DeleteAlert'
 import MenuDropdown from "../Dropdown/MenuDot"
 import { EMAIL_SVG, PHONE_SVG } from "../../assets/svg_collection"
 import Icons from "../../assets/Icons"   
@@ -67,6 +69,7 @@ import Icons from "../../assets/Icons"
            'emailIcon': EMAIL_SVG,
            'phoneIcon': PHONE_SVG,
            MenuDropdown,
+           DeleteAlert,
         }
 
     }
