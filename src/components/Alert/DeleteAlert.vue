@@ -56,6 +56,7 @@ export default {
     right: 0;
     padding: 0.5rem;
     display: flex;
+    border-radius: 7px;
     align-items: center;
     z-index: 1;
 }
