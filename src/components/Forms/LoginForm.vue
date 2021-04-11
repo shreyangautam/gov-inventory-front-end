@@ -91,7 +91,7 @@ export default {
       "px-4 py-2 transition duration-300 border border-red-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200",
 
       forgotPasswordLink:
-        "text-sm text-blue-600 hover:underline focus:text-blue-800",
+        "text-sm text-blue-400 hover:underline focus:text-blue-800",
       rememberCheckBox:
         "w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200",
       submitButton:
