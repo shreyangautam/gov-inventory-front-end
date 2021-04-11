@@ -1,7 +1,7 @@
 <template>
     <transition name="fade">
         <div class="popup-modal" v-if="isVisible">
-            <div class="window">
+            <div class="window border-t-8 border-green-400">
                 <div :class="messageIcon">
                     <font-awesome-icon icon="check-circle"/>
                 </div>
@@ -76,7 +76,7 @@ export default {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem 6.5%;
+    padding: 1.7rem 6.5%;
     text-align: center;
 }
 </style>
