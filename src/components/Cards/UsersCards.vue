@@ -1,5 +1,7 @@
 <template>
-  <div :class="cardContainer">
+  <transition       
+      enter-active-class="animate-fade-in-down">
+  <div :class="cardContainer" v-if="showCards">
     <div :class="cardBody">
       <div :class="cardCover">
         <img
@@ -34,6 +36,7 @@
       </p>
     </div>
   </div>
+  </transition>
 </template>
 
 <script>
@@ -53,8 +56,12 @@ export default {
     phoneIcon: PHONE_SVG,
     MenuDropdown,
   },
+  mounted(){
+     this.showCards = true
+  },
   data() {
     return {
+      //Styles
       cardContainer: "px-3 flex w-full py-3 lg:w-1/2 xl:w-1/3",
       cardBody:
         "flex flex-col items-stretch min-h-full pb-4 mb-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-175 ease-in",
@@ -73,6 +80,9 @@ export default {
       userPosition: "text-base tracking-normal text-gray-500",
       userOtherInfo:
         "flex flex-row flex-wrap w-full py-2 overflow-hidden justify-center text-sm text-gray-700",
+
+      //UI Config
+      showCards: false
     };
   },
 };

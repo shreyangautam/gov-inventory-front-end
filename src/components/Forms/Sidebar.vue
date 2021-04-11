@@ -2,7 +2,7 @@
     <div :class="containerSidebar">
         <div :class="Sidebar">
             <div class="flex justify-center bg-primary border-b border-primary mx-5">
-                <span class="py-4">
+                <span class="py-8">
                     <img src="../../assets/logo.png" alt="Logo" :class="provincialLogo">
                 </span>
             </div>
@@ -25,8 +25,11 @@
                             <div :class="dashboardHeader">Modules</div>
                         </div>
                     </div>
+                    
                     <li class="" v-for="module in modules" v-bind:key="module.id">
-                        <div href="#" class="transition duration-300 ease-in-out" :class="[module.collapse ? menuListLinkActive : menuListLink1]" @click="module.collapse = !module.collapse">    
+                        <!-- APPLY CUSTOM BORDER -->
+                        <borderTop v-if="module.collapse"/>
+                        <div href="#" :class="[module.collapse ? menuListLinkActive1 : menuListLink1]" @click="module.collapse = !module.collapse">    
                             <div>
                                 <span :class="menuListIcon">
                                     <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
@@ -34,11 +37,14 @@
                                 <span :class="menuListText">{{module.name}}</span>
                             </div>
                             <div>
-                                <font-awesome-icon class=" text-gray-300 mr-4" v-if="!module.collapse" icon="chevron-right" />
-                                <font-awesome-icon class=" text-gray-700 mr-4" v-else icon="chevron-down" />
+                                <font-awesome-icon class=" text-gray-300 mr-6" v-if="!module.collapse" icon="chevron-right" />
+                                <font-awesome-icon class=" text-gray-700 mr-6" v-else icon="chevron-down" />
                             </div>
                         </div>
-                        <ul class="mx-4 mt-2 inset-y-2 bg-primaryDark rounded-lg" v-if="module.collapse">
+                        <!-- APPLY CUSTOM BORDER -->
+                        <borderBottom v-if="module.collapse"/>
+                        <!-- ITEMS -->
+                        <ul class="relative mx-4 mt-2 mb-5 inset-y-2 bg-primaryDark rounded-lg z-20" v-if="module.collapse">
                          <li class="" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
                             <a href="#" :class="[module.collapse ? notActive : active]">
                                 <span :class="menuListIcon">
@@ -58,13 +64,11 @@
                     </div>
                     <li class="transition duration-300">
                         <router-link to="/user-management">
-                        <a href="#" :class="menuListLink2">
-                            <span :class="menuListIcon">
-                                <img src="../../assets/svg/management.svg" alt="home icon" class="h-5 w-5 mr-1">
-                            </span>
-                            <span :class="menuListText">User Management</span>
-                         
+                        <borderTop v-if="isUserMgtActive"/>
+                        <a href="#" :class="[isUserMgtActive ? menuListLinkActive2 : menuListLink2]" @click="isUserMgtActive = true">
+                            <span :class="menuListText"><font-awesome-icon icon='user-cog' class="ml-2 mr-3"/>User Management</span>
                         </a>
+                        <borderBottom v-if="isUserMgtActive"/>
                         </router-link>
                     </li>
                 </ul>
@@ -75,14 +79,16 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronRight, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight, faChevronDown, faUserCog } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-library.add(faChevronRight, faChevronDown)
+import { sideBarNavBorderTop, sideBarNavBorderBottom} from "../../helpers/uiHelpers"
+library.add(faChevronRight, faChevronDown, faUserCog)
 
 export default {
     components: {
        "font-awesome-icon": FontAwesomeIcon,
+       "borderTop": sideBarNavBorderTop,
+       "borderBottom": sideBarNavBorderBottom
     },
     data() {
         return {
@@ -104,18 +110,23 @@ export default {
             dashboardHeader: "select-none flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-custom tracking-wide uppercase",
             managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
             menuListLink1: 
-                "relative flex flex-row justify-between select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
+                "relative flex flex-row z-20 transition duration-300 ease-in-out justify-between select-none items-center h-12 focus:outline-none text-gray-100 ml-4 rounded-l-3xl border-transparent",
             menuListLink2: 
-                "relative flex flex-row items-center h-10 select-none focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 border-transparent",
-            menuListLinkActive: 
+                "relative flex flex-row z-20 select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
+            menuListLinkActive1: 
                 "relative flex flex-row justify-between select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
+            menuListLinkActive2: 
+                "relative flex flex-row select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
             active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
             notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
             menuListIcon: "inline-flex justify-center items-center ml-4",
-            menuListText: "ml-2 font-normal text-md truncate font-custom",
+            menuListText: "ml-2 font-normal text-md truncate",
             
             //UI Triggers
             collapse: true,
+
+            //UserManagement
+            isUserMgtActive: false
         }
     
     },
@@ -127,3 +138,13 @@ export default {
     },
 }
 </script>
+
+<style>
+/* FOR CUSTOM SIDEBAR BORDER */
+.custom{
+    margin-top: -40px; 
+}
+.customBottom{
+    margin-bottom: -40px;
+}
+</style>
