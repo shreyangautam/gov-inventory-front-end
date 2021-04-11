@@ -5,7 +5,7 @@
                 <div :class="messageIcon">
                     <font-awesome-icon icon="exclamation-circle"/>
                 </div>
-                <div class="bg-clip-text text-lg font-bold text-transparent bg-gradient-to-r from-red-400 to-blue-500">Error Message</div>
+                <div class="text-lg font-semibold">Error Message</div>
                 <div>
                     <button class="px-4 py-1 mt-4 text-sm font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none">Close</button>
                 </div>
@@ -29,7 +29,7 @@ export default {
 
     data: () => ({
         messageIcon: "text-center text-6xl text-red-500 mb-5",
-        isVisible: true,
+        isVisible: false,
     }),
 
     methods: {

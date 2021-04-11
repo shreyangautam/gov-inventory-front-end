@@ -5,8 +5,8 @@
                 <div :class="messageIcon">
                     <font-awesome-icon icon="user-slash"/>
                 </div>
-                <div class="bg-clip-text font-bold text-transparent text-sm bg-gradient-to-r from-red-400 to-blue-500">
-                    delete this user?
+                <div class="font-semibold text-sm">
+                    Delete this user?
                 </div>
                 <div class="flex gap-2">
                     <button class="px-4 py-1 mt-4 text-xs font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none">Yes</button>
