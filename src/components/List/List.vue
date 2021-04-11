@@ -33,7 +33,7 @@ export default {
     ListBelt,
     UsersCards,
     Pagination,
-    Searching
+    Searching,
   },
   data(){
     return{

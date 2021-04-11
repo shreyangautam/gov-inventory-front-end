@@ -12,11 +12,14 @@
             <div class="">
                 <span class="text-md font-medium font-custom">{{modalTitle}}</span>
             </div>
+            <div class="absolute right-0 pr-8">
+              <div class="bg-red-400 rounded-full border-red-400 border-2 w-4 h-4 hover:border-red-500 cursor-pointer" @click="$emit('closeModal')"></div>
+            </div>
          </div>
         <!-- CONTENT -->
         <slot name="modal-content"> </slot>
         <!-- CONTENT -->
-        <div class="flex justify-end gap-4 mt-1">
+        <div class="flex justify-end gap-4 mt-1" v-if="!disableDefaultButtons">
           <button
             class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-red-500 hover:transition-colors duration-150 ease-in border border-red-400 rounded shadow hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none"
             @click="$emit('closeModal')"
@@ -44,7 +47,8 @@ export default {
     },
     props:{
         modalTitle: String,
-        modalButtonName: String
+        modalButtonName: String,
+        disableDefaultButtons: Boolean
     }
  
 };

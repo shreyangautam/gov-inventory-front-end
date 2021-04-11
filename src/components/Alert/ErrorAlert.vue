@@ -1,13 +1,13 @@
 <template>
     <transition name="fade">
         <div class="popup-modal" v-if="isVisible">
-            <div class="window border-t-8 border-green-400">
+            <div class="window border-t-8 border-red-500" >
                 <div :class="messageIcon">
-                    <font-awesome-icon icon="check-circle"/>
+                    <font-awesome-icon icon="exclamation-circle"/>
                 </div>
-                <div class="bg-clip-text text-lg font-bold text-transparent bg-gradient-to-r from-green-400 to-blue-400">Successfully Added</div>
+                <div class="text-lg font-semibold">Error Message</div>
                 <div>
-                    <button class="px-6 py-1 mt-4 text-sm font-semibold leading-6 text-green-400 uppercase hover:transition-colors duration-150 ease-in border border-green-400 rounded-2xl shadow-md hover:shadow-lg hover:bg-green-400 hover:text-white focus:outline-none">Ok</button>
+                    <button class="px-4 py-1 mt-4 text-sm font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none antialiased">Close</button>
                 </div>
             </div>
         </div>
@@ -16,19 +16,21 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faCheckCircle)
+library.add(faExclamationCircle)
 
 export default {
     name: 'PopupModal',
     components: {
         'font-awesome-icon' : FontAwesomeIcon,
     },
-
+    props: {
+      message: String
+    },
     data: () => ({
-        messageIcon: "text-center text-6xl text-green-400 mb-5",
+        messageIcon: "text-center text-6xl text-red-500 mb-5",
         isVisible: false,
     }),
 
@@ -76,7 +78,7 @@ export default {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.7rem 6.5%;
+    padding: 1.5rem 6.5%;
     text-align: center;
 }
 </style>

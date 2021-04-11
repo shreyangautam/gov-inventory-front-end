@@ -10,12 +10,16 @@
     modalTitle="Add User"
     modalButtonName="Add User"
     @modalAction="addUser"
+    disableDefaultButtons
   >
     <template v-slot:modal-content>
       <Loading v-if="modalLoading"/>
       <div v-else class="h-10"/>
-      <SuccessAlert/>
+      <ErrorAlert/>
       <div class="flex flex-col -mx-3">
+        <div class="w-full px-3 mb-5">
+        <Stepper/>
+        </div>
         <div class="w-full px-3 mb-5">
           <Input
             type="text"
@@ -88,8 +92,10 @@ import store from "../../store/store";
 import Modal from "../../components/Modals/Modal";
 import Loading from "../../components/Loading"
 import SuccessAlert from "../../components/Alert/SuccessAlert"
+import ErrorAlert from "../../components/Alert/ErrorAlert"
 import { mapState } from "vuex";
 import { clearAllFields, formValidation } from "../../helpers/helpers";
+import Stepper from "../../components/Stepper/Stepper"
 export default {
   computed: mapState(["usersList"]),
   data() {
@@ -130,7 +136,9 @@ export default {
     Modal,
     Input,
     Loading,
-    SuccessAlert
+    SuccessAlert,
+    ErrorAlert,
+    Stepper
   },
   created() {
     this.getUserList();
