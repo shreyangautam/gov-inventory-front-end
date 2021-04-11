@@ -47,7 +47,7 @@
       </a>
       <a
         href="#"
-        class="block px-6 pt-2 my-1 text-sm capitalize text-gray-300 font-custom hover:underline hover:text-white border-t border-primary"
+        class="block px-6 pt-2 my-1 text-sm capitalize text-gray-300 font-custom hover:text-white border-t border-primary"
       >
         <span class="flex pt-1 ml-1">
         <logoutIcon icon="box-right-arrow" class="mr-2 text-sm"/> Logout
