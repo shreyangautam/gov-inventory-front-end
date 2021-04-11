@@ -31,7 +31,7 @@
                         <borderTop v-if="module.collapse"/>
                         <div href="#" :class="[module.collapse ? menuListLinkActive1 : menuListLink1]" @click="module.collapse = !module.collapse">    
                             <div>
-                                <span :class="menuListIcon">
+                                <span :class="menuListIcon1">
                                     <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
                                 </span>
                                 <span :class="menuListText">{{module.name}}</span>
@@ -47,10 +47,7 @@
                         <ul class="relative mx-4 mt-2 mb-5 inset-y-2 bg-primaryDark rounded-lg z-20" v-if="module.collapse">
                          <li class="" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
                             <a href="#" :class="[module.collapse ? notActive : active]">
-                                <span :class="menuListIcon">
-                                    <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
-                                </span>
-                                <span :class="menuListText">{{specificPermission.name}}</span>
+                                <span :class="subListText">{{specificPermission.name}}</span>
                             </a>
                          </li>
                         </ul>
@@ -119,8 +116,9 @@ export default {
                 "relative flex flex-row select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
             active: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-white opacity-90",
             notActive: "relative flex flex-row items-center h-10 shadow-inner focus:outline-none text-gray-300 hover:text-white opacity-90 hover:text-white",
-            menuListIcon: "inline-flex justify-center items-center ml-4",
+            menuListIcon1: "inline-flex justify-center items-center ml-4",
             menuListText: "ml-2 font-normal text-md truncate",
+            subListText: "ml-11 font-normal text-md truncate",
             
             //UI Triggers
             collapse: true,

@@ -1,7 +1,7 @@
 <template>
     <div>
        <LoginForm 
-        name="INVENTORY MANAGEMENT SYSTEM" 
+        name="Sorsogon Provincial Government" 
         description="An online inventory monitoring for the Provincial Government"
         :isLoginFailed="isLoginFailed"
         :isLoading="isLoading"
