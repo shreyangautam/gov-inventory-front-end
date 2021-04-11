@@ -4,6 +4,7 @@
     <ListBelt :config="listBeltConfig"/>
     <!-- CONTENT -->
     <section class="flex flex-row flex-wrap relative">
+      <ErrorAlert/>
       <UsersCards/>
       <UsersCards/>
       <UsersCards/>
@@ -14,6 +15,7 @@
 </template>
 
 <script>
+import ErrorAlert from '../Alert/ErrorAlert'
 import ListBelt from "../ListBelt/ListBelt"
 import UsersCards from "../Cards/UsersCards"
 import Pagination from "../ListPagination/ListPagination"
@@ -21,7 +23,8 @@ export default {
   components: {  
     ListBelt,
     UsersCards,
-    Pagination
+    Pagination,
+    ErrorAlert,
   },
   data(){
     return{
