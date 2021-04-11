@@ -92,8 +92,8 @@ export default {
     },
     data() {
         return {
-            containerSidebar: "min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50",
-            Sidebar: "fixed flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg",
+            containerSidebar: "h-full flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none",
+            Sidebar: "relative flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg overscroll-none",
             provincialLogo: "h-32 w-32",
             containerProfile: "flex items-center pl-6 h-20",
             imageProfile: 
@@ -102,7 +102,7 @@ export default {
             profileName: "text-sm font-medium tracking-wide truncate text-white font-sans uppercase",
             profileBadge: 
                 "px-2 py-0.5 ml-auto text-xs font-semibold tracking-wide text-white bg-red-400 rounded-md",
-            containerMenu: "overflow-y-auto overflow-x-hidden flex-grow",
+            containerMenu: "overflow-y-auto overflow-x-hidden bg-primary flex-grow h-full",
             menuList1: "flex flex-col pt-6",
             menuList2: "flex flex-col pt-4",
             headerContainer: 
