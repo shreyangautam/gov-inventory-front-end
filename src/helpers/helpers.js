@@ -60,7 +60,7 @@ export const API_REQUEST = async (type, endpoint, data, params, headers) => {
 /**
 * clearAllFields
 * clear all the values in the fields
-* @param {*} Array - array, must be array of fields
+* @param {*} fieldsArray - array, must be array of fields
 * return array with value errased or null
 */
 export const clearAllFields = (fieldsArray) => {
@@ -76,11 +76,36 @@ export const clearAllFields = (fieldsArray) => {
 /**
 * formValidation
 * search for empty values in the field array (if required)
-* @param {*} Array - array, must be array of fields
+* @param {*} fieldsArray - array, must be array of fields
 * return string as erro message or true if all fields have values
 */
 
 export const formValidation = (fieldsArray) => {
+  
+  let errorCounter = 0
+  fieldsArray?.map((data) => {
+     if(data.isRequired){
+        errorCounter = !data.value && errorCounter+1
+     }
+  })
+
+  if(errorCounter > 0){
+    return "Please fill out all the required fields"
+  }
+  else{
+    return true
+  }
+
+}
+
+/**
+* alertMessageSelector
+* search for empty values in the field array (if required)
+* @param {*} selector - string, type of message you want
+* return string as message or null the selector doenst match any records
+*/
+
+export const alertMessageSelector = (fieldsArray) => {
   
   let errorCounter = 0
   fieldsArray?.map((data) => {
