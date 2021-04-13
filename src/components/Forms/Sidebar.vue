@@ -54,12 +54,15 @@ import Modules from '../Accordion/Modules'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronRight, faChevronDown, faUserCog } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { sideBarNavBorderTop, sideBarNavBorderBottom} from "../../helpers/uiHelpers"
 
 library.add(faChevronRight, faChevronDown, faUserCog)
 
 export default {
     components: {
        "font-awesome-icon": FontAwesomeIcon,
+       "borderTop": sideBarNavBorderTop,
+       "borderBottom": sideBarNavBorderBottom,
        Modules,
     },
     data() {
