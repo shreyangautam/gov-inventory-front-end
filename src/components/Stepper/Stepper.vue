@@ -58,7 +58,7 @@ export default {
           isNext: false,
         },
       ],
-
+      
       //STYLES
       activeStep: "bg-green-100 w-full py-5 pl-4 text-xs font-medium tracking-wide text-green-600 select-none",
       activeStepName: "text-sm font-bold tracking-wide text-green-600 select-none",
