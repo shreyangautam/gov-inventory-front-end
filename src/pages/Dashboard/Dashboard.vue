@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen">
     <div class="w-64 flex-shrink-0">
-      <Sidebar :modules="modules"/>
+      <Sidebar/>
     </div>
     <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
       <div class="relative flex flex-col w-full bg-gray-100 p-8 rounded-3xl">
@@ -19,46 +19,6 @@ import { mapState } from "vuex";
 import store from "../../store/store";
 
 export default {
-  data(){
-    return{
-      modules: [
-        {
-          id: 1,
-          name: "PBAC Account",
-          collapse: false,
-          specificPermissions: [
-             {
-               id: 1,
-               name: "Purchase Request"
-             },
-             {
-               id: 2,
-               name: "Second Modules"
-             }
-
-          ]
-        },
-                {
-          id: 2,
-          name: "PGSO",
-          collapse: false,
-          specificPermissions: [
-             {
-               id: 1,
-               name: "Purchase Request"
-             },
-             {
-               id: 2,
-               name: "Second Modules"
-             }
-
-          ]
-        }
-
-      ],
-
-    }
-  },
   components: {
     Sidebar,
     Navigation,
