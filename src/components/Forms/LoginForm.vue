@@ -24,7 +24,7 @@
           <div :class="space" v-if="!isLoading && !isLoginFailed"></div>
           <form :class="formStyle">
             <div :class="inputContainer">
-              <label for="email" :class="inputLabel">Email address</label>
+              <label for="email" :class="inputLabel">Email Address</label>
               <input
                 type="email"
                 id="email"
@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       logo: "w-24 h-24 my-3.5",
-      invalidMsg: "mb-5 text-red-600",
+      invalidMsg: "mb-5 text-red-500",
       mainContainer:
         "flex items-center w-full h-screen bg-primary xl:justify-center",
       space: "pb-8",
@@ -88,12 +88,12 @@ export default {
       inputField:
         "px-4 py-2 transition duration-300 border border-gray-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-blue-500",
       inputFieldInvalid:
-      "px-4 py-2 transition duration-300 border border-red-300 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200",
+      "px-4 py-2 transition duration-300 border-2 border-red-500 rounded focus:border-transparent focus:outline-none focus:ring-4 focus:ring-red-200",
 
       forgotPasswordLink:
-        "text-sm text-blue-600 hover:underline focus:text-blue-800",
+        "text-sm text-blue-400 hover:underline focus:text-blue-800",
       rememberCheckBox:
-        "w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:outline-none focus:ring-blue-200",
+        "w-4 h-4 transition duration-500 rounded focus:outline-none",
       submitButton:
         "w-full mt-14 px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-blue-500 rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4",
       submitButtonDisabled:
