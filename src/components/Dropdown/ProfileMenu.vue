@@ -48,6 +48,7 @@
       <a
         href="#"
         class="block px-6 pt-2 my-1 text-sm capitalize text-gray-300 font-custom hover:text-white border-t border-primary"
+        @click="logout"
       >
         <span class="flex pt-1 ml-1">
         <logoutIcon icon="box-right-arrow" class="mr-2 text-sm"/> Logout
@@ -80,7 +81,14 @@ export default {
     methods:{
         onClickAway(event) {
             this.showProfDropdown = !this.showProfDropdown
-        }  
+        },
+
+        logout: function () {
+          this.$store.dispatch('authLogout')
+          .then(() => {
+            this.$router.push('/login')
+          })
+        }
     }
 }
 </script>

@@ -31,6 +31,13 @@ export default {
          console.log(localStorage.getItem('token'))
          context.commit('loadToken', localStorage.getItem('token'))
        }
+    },
+
+    authLogout (context) {
+      if(localStorage.removeItem('token')){
+        console.log(localStorage.removeItem('token'))
+        context.commit('loadToken', localStorage.removeItem('token'))
+      }
     }
   
 }
