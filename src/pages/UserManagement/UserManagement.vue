@@ -18,8 +18,10 @@
       <ErrorAlert/>
       <div class="flex flex-col -mx-3">
       
-        <Stepper>
+        <Stepper >
+        
         <template v-slot:stepper-pages>
+        <div>
         <div class="w-full px-3 mb-5">
           <Input
             type="text"
@@ -78,6 +80,7 @@
               type="numeric"
             />
           </div>
+        </div>
         </div>
         </template>
         </Stepper>
