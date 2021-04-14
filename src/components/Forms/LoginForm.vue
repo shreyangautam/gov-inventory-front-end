@@ -10,13 +10,14 @@
             </div>
           </div>
           <div>
-            <img src="../../assets/svg2/Working.svg" alt="working" class="my-8 rounded-3xl">
+            <img src="../../assets/svg2/Working.svg" alt="working" class="rounded-3xl">
           </div>
           <p :class="descriptionStyle">{{ description }}</p>
         </div>
       </div>
       <div :class="rightContainer" class="right relative">
-        <div class="w-80 absolute top-32 left-48">
+        <div class="w-full relative lg:top-40 2xl:top-52 ">
+          <div class="lg:px-32 2xl:px-64">
           <h3 :class="loginHeader">ACCOUNT LOGIN</h3>
 
           <h3 :class="invalidMsg" v-if="isLoginFailed">{{isLoginFailed ? 'Invalid Email or Password' : ''}}</h3>
@@ -58,6 +59,7 @@
           :class="[isLoading ? submitButtonDisabled : submitButton]" 
           @click="$emit('login', email, password)" 
           :disabled="isLoading">{{isLoading ? 'Logging in...' : 'Log in'}}</button>
+          </div>
         </div>
       </div>
     </div>
@@ -75,12 +77,12 @@ export default {
         "flex items-center w-full h-screen bg-primary xl:justify-center",
       space: "pb-8",
       loginContainer:
-        "flex flex-col overflow-hidden bg-primary shadow-lg max md:flex-row md:flex-1 xl:w-screen xl:h-screen sm:h-screen",
+        "relative flex flex-col overflow-hidden bg-primary shadow-lg max md:flex-row md:flex-1 xl:w-screen xl:h-screen sm:h-screen",
       leftContainer:
         "p-4 py-6 text-white bg-primary md:w-3/6 md:flex-shrink-0 md:justify-evenly flex justify-center",
       nameStyle: "my-3 text-3xl font-bold tracking-wider text-center gap-2 flex justify-center items-center",
       descriptionStyle: "mt-6 font-normal text-center text-gray-300 md:mt-0",
-      rightContainer: "p-5 bg-primaryDark md:flex-1",
+      rightContainer: "bg-primaryDark md:flex-1",
       loginHeader: "my-4 text-2xl font-semibold text-white",
       formStyle: "flex flex-col space-y-5",
       inputContainer: "flex flex-col space-y-1 w-full",

@@ -19,9 +19,11 @@
         <!-- ITEMS -->
         <ul class="relative mx-4 mt-2 mb-5 inset-y-2 bg-primaryDark rounded-lg z-20" v-if="module.collapse">
             <li class="" v-for="specificPermission in module.specificPermissions" v-bind:key="specificPermission.id">
+                <router-link :to="specificPermission.route">
                 <a href="#" :class="[module.collapse ? notActive : active]">
                     <span :class="subListText">{{specificPermission.name}}</span>
                 </a>
+                </router-link>
             </li>
         </ul>
 </li>

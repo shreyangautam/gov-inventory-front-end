@@ -98,36 +98,16 @@ export default {
             isUserMgtActive: false,
 
             modules: [
-                {
+            {
                 id: 1,
-                name: "PBAC Account",
-                collapse: false,
-                    specificPermissions: [
-                        {
-                        id: 1,
-                        name: "Purchase Request"
-                        },
-                        {
-                        id: 2,
-                        name: "Second Modules"
-                        }
-
-                    ]
-                },
-                        {
-                id: 2,
                 name: "PGSO",
                 collapse: false,
                     specificPermissions: [
                         {
                         id: 1,
-                        name: "Purchase Request"
+                        name: "PPMP",
+                        route: "/ppmp"
                         },
-                        {
-                        id: 2,
-                        name: "Second Modules"
-                        }
-
                     ]
                 }
 
