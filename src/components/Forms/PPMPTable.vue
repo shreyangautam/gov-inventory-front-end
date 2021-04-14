@@ -10,7 +10,7 @@
                         <th class=" py-4">Item/Equipment</th>
                         <th class=" py-4">Quantity</th>
                         <th class=" py-4">Unit</th>
-                        <th class="py-4 flex flex-col">Consumable/<span>Non-Consumable</span></th>
+                        <th class="py-4">Type</th>
                     </tr>
                     </thead>
                     <tbody class="text-sm font-custom bg-white rounded-lg text-gray-700 w-full">
