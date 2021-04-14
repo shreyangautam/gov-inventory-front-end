@@ -40,11 +40,11 @@
         </div>
         <div class="flex">
           <div class="w-1/2 px-3 mb-5">
-            <Dropdown label="From" name="Unit" :data="unit" />
+            <Dropdown label="Unit" name="Unit" :data="unit" />
           </div>
 
           <div class="w-1/2 px-3 mb-5">
-            <Dropdown label="To" name="Type" :data="type" />
+            <Dropdown label="Type" name="Type" :data="type" />
           </div>
         </div>
       </div>
