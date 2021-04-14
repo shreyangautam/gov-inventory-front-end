@@ -6,7 +6,8 @@
     <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
       <div class="relative flex flex-col w-full bg-gray-100 p-8 rounded-3xl">
           <Navigation/>
-           <router-view></router-view>
+           <router-view>
+           </router-view>
       </div>
     </div>
   </div>
