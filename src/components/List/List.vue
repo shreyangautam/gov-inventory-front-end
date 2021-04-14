@@ -8,7 +8,7 @@
     
     <!-- CONTENT -->
     <section v-else class="flex flex-row flex-wrap relative">
-      <div v-for="user in data" v-bind:key="user.id" class="w-full">
+      <div v-for="user in data" v-bind:key="user.id" class="w-full flex flex-row">
       <UsersCards
        :email="user.email" 
        :firstName="user.fname"
