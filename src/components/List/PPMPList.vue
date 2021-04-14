@@ -8,7 +8,7 @@
     
     <!-- CONTENT -->
     <section v-else class="flex flex-row flex-wrap relative">
-    <!-- TABLE HERE -->
+      <PPMPTable/>
     </section>
     <!-- PAGINATION -->
     <Pagination/>
@@ -22,6 +22,7 @@ import Pagination from "../ListPagination/ListPagination"
 import Searching from "../Loading/Searching"
 import Permission from '../Accordion/Permission'
 import subPermission from '../Accordion/subPermission'
+import PPMPTable from '../Forms/PPMPTable'
 export default {
   components: {  
     ListBelt,
@@ -30,6 +31,7 @@ export default {
     Searching,
     Permission,
     subPermission,
+    PPMPTable,
   },
   data(){
     Permission
