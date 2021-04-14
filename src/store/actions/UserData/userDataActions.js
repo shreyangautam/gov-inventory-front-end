@@ -33,11 +33,26 @@ export default {
        }
     },
 
-    authLogout (context) {
-      if(localStorage.removeItem('token')){
-        console.log(localStorage.removeItem('token'))
-        context.commit('loadToken', localStorage.removeItem('token'))
-      }
-    }
-  
+    async logout(context) {
+        try {
+          const response = await API_REQUEST("post", "/logout",null, null, {
+            'Accept': 'application/json', 
+            'Authorization': `Bearer ${localStorage.getItem('token')}`
+          });
+          if(response.status == 200) {
+            console.log(response)
+            localStorage.clear()
+          }
+         
+        } catch (error) {
+          console.log(error)
+        }
+    },
+
 }
+    // authLogout (context) {
+    //   if(localStorage.removeItem('token')){
+    //     console.log(localStorage.removeItem('token'))
+    //     context.commit('loadToken', localStorage.removeItem('token'))
+    //   }
+    // }
