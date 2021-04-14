@@ -17,21 +17,6 @@
        :isActive="user.is_active"
       />
       </div>
-      <div>
-        <div class="h-80 w-80 px-6 pt-4 rounded-lg shadow-md bg-white">
-          <div class="w-full h-auto bg-white rounded-md">
-            <Permission title="PBAC" class="border-b border-gray-100">
-                <template v-slot:role-permission>
-                  <subPermission name="Purchase Request">
-                        <template v-slot:role-subpermission>
-                          <h1 class="ml-16 mt-1">Can delete</h1>
-                        </template>
-                  </subPermission>
-                </template>
-            </Permission>
-          </div>
-        </div>
-      </div>
     </section>
     <!-- PAGINATION -->
     <Pagination/>
