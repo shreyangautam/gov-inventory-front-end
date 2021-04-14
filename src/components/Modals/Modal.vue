@@ -17,7 +17,9 @@
             </div>
          </div>
         <!-- CONTENT -->
-        <slot name="modal-content"> </slot>
+        <slot name="modal-content"> 
+          
+        </slot>
         <!-- CONTENT -->
         <div class="flex justify-end gap-4 mt-1" v-if="!disableDefaultButtons">
           <button

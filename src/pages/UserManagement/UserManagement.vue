@@ -4,6 +4,7 @@
     :isLoading="isLoading"
     @listBeltButtonAction="listBeltAction"
   />
+  <SuccessAlert v-if="showSuccess" @closeAlert="showSuccess = false"/>
   <Modal
     v-if="openModal"
     @closeModal="closeModal"
@@ -13,22 +14,22 @@
     disableDefaultButtons
   >
     <template v-slot:modal-content>
+      <ErrorAlert :message="errorMessage" v-if="showError" @closeAlert="showError = false"/>
       <Loading v-if="modalLoading"/>
       <div v-else class="h-10"/>
-      <ErrorAlert/>
       <div class="flex flex-col -mx-3">
       
-        <Stepper >
+        <Stepper :stepsData="stepperData" @stepperAction="switchStepPages">
         
         <template v-slot:stepper-pages>
-        <div>
+        <div v-if="stepperData[0].isActive">
         <div class="w-full px-3 mb-5">
           <Input
             type="text"
             label="Firstname"
             placeholder="Enter firstname of user"
             @getValue="addToCollections"
-      
+            :value="fields[0].value"
             isRequired
             maxLength="25"
             isTextOnly
@@ -38,8 +39,9 @@
           <Input
             type="text"
             label="Middlename"
-            placeholder="Enter firstname of user"
+            placeholder="Enter midlename of user"
             @getValue="addToCollections"
+            :value="fields[1].value"
             isRequired
             isTextOnly
             maxLength="20"
@@ -51,8 +53,9 @@
           <Input
             type="text"
             label="Lastname"
-            placeholder="Enter firstname of user"
+            placeholder="Enter lastname of user"
             @getValue="addToCollections"
+            :value="fields[2].value"
             isRequired
             isTextOnly
             maxLength="20"
@@ -68,7 +71,7 @@
               maxLength="20"
               isRequired
               type="text"
-       
+              :value="fields[3].value"
             />
           </div>
 
@@ -82,6 +85,9 @@
           </div>
         </div>
         </div>
+         <div v-if="stepperData[1].isActive">You are in Roles</div>
+         <div v-if="stepperData[2].isActive">You are in Permission</div>
+
         </template>
         </Stepper>
       </div>
@@ -98,7 +104,7 @@ import Loading from "../../components/Loading"
 import SuccessAlert from "../../components/Alert/SuccessAlert"
 import ErrorAlert from "../../components/Alert/ErrorAlert"
 import { mapState } from "vuex";
-import { clearAllFields, formValidation } from "../../helpers/helpers";
+import { clearAllFields, formValidation, resetStepperData } from "../../helpers/helpers";
 import Stepper from "../../components/Stepper/Stepper"
 export default {
   computed: mapState(["usersList"]),
@@ -107,6 +113,9 @@ export default {
       isLoading: true,
       openModal: false,
       modalLoading: false,
+      errorMessage: '',
+      showError: false,
+      showSuccess: false,
       fields: [
         {
           label: "Firstname",
@@ -133,6 +142,25 @@ export default {
           value: "",
         },
       ],
+
+      stepperData: [
+        {
+          stepName: "Basic Info",
+          isActive: true,
+          isNext: false,
+        },
+        {
+          stepName: "Roles",
+          isActive: false,
+          isNext: true,
+        },
+        {
+          stepName: "Permission",
+          isActive: false,
+          isNext: false,
+        },
+
+      ]
     };
   },
   components: {
@@ -161,6 +189,8 @@ export default {
     },
     closeModal() {
       this.fields = clearAllFields(this.fields);
+      //this.stepperData = resetStepperData(this.stepperData)
+      console.log(resetStepperData(this.stepperData))
       //console.log(clearAllFields(this.fields))
       this.openModal = false;
       console.log(this.fields);
@@ -172,10 +202,31 @@ export default {
       //console.log(this.fields[index].value)
     },
     addUser() {
-      this.modalLoading = !this.modalLoading
+      //this.modalLoading = !this.modalLoading
       let result = formValidation(this.fields)
-      console.log(this.fields);
+      if(result === true){
+        console.log("send the data to api")
+        this.closeModal()
+        this.showSuccess = true
+        
+      }
+      else{
+        this.errorMessage = result
+        this.showError = true
+      }
+      console.log(result);
     },
+    switchStepPages(data){
+       if(data === 'finish'){
+         console.log("execute the finish")
+         this.addUser()
+       }
+       else{
+         this.stepperData = data
+         console.log(this.stepperData)
+       }
+
+    }
   },
 };
 </script>

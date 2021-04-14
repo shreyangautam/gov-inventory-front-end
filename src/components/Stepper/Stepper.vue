@@ -3,7 +3,7 @@
   <div
     class="mb-5 w-full bg-gray-100 rounded-xl flex flex-row justify-between overflow-hidden shadow-none antialiased"
   >
-    <div v-for="(step, index) in tempData" :key="index" class="w-full">
+    <div v-for="(step, index) in stepsData" :key="index" class="w-full">
     <div :class="[step.isActive ? activeStep : step.isNext ? nextStep : defaultStep]">
       <span>
         STEP 0{{index + 1}}</span
@@ -30,7 +30,7 @@
       class="inline-flex items-right px-4 py-2 text-md font-medium leading-6 text-white hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow hover:shadow-lg hover:bg-blue-700 focus:outline-none"
       @click="next"
     >
-      <span>{{counter + 1 === tempData.length ? 'Finish' : 'Next Step'}}</span>
+      <span>{{counter + 1 === stepsData.length ? 'Finish' : 'Next Step'}}</span>
     </button>
   </div>
   
@@ -38,27 +38,11 @@
 
 <script>
 export default {
+  emits: ["stepperAction"],
   data() {
     return {
-      counter: 0,
-      tempData: [
-        {
-          stepName: "Basic Info",
-          isActive: true,
-          isNext: false,
-        },
-        {
-          stepName: "Roles",
-          isActive: false,
-          isNext: true,
-        },
-        {
-          stepName: "Permission",
-          isActive: false,
-          isNext: false,
-        },
-      ],
-      
+      counter: 0, 
+      unlockFinish: false,     
       //STYLES
       activeStep: "bg-green-100 w-full py-5 pl-4 text-xs font-medium tracking-wide text-green-600 select-none",
       activeStepName: "text-sm font-bold tracking-wide text-green-600 select-none",
@@ -77,26 +61,43 @@ export default {
   },
   methods: {
       next(){
-         this.tempData[this.counter].isActive = false
-         this.tempData[this.counter].isNext = false
-         this.counter = this.counter < this.tempData.length - 1 ? this.counter + 1 : this.counter
-         this.tempData[this.counter].isActive = true
-         if(this.counter + 1 < this.tempData.length){
-            this.tempData[this.counter + 1].isNext = true
+         if(this.unlockFinish){
+           this.$emit('stepperAction', 'finish')
+         }
+         this.stepsData[this.counter].isActive = false
+         this.stepsData[this.counter].isNext = false
+         this.counter = this.counter < this.stepsData.length - 1 ? this.counter + 1 : this.counter
+         this.stepsData[this.counter].isActive = true
+         if(this.counter + 1 < this.stepsData.length){
+            this.stepsData[this.counter + 1].isNext = true
          }
          console.log(this.counter)
-         console.log(this.tempData.length)
+         //console.log(this.stepsData.length)
+         if(this.counter + 1 == this.stepsData.length){
+            this.unlockFinish = true
+         }
+         else{
+            this.$emit('stepperAction', this.stepsData)
+         }
+         
       },
       previous(){
-         this.tempData[this.counter].isActive = false
-         if(this.counter + 1 < this.tempData.length){
-           this.tempData[this.counter + 1].isNext = false
+         this.stepsData[this.counter].isActive = false
+         if(this.counter + 1 < this.stepsData.length){
+           this.stepsData[this.counter + 1].isNext = false
          }
          this.counter = this.counter > 0 ? this.counter - 1 : this.counter
-         this.tempData[this.counter].isActive = true
-         this.tempData[this.counter + 1].isNext = true
+         this.stepsData[this.counter].isActive = true
+         this.stepsData[this.counter + 1].isNext = true
          
-         console.log(this.counter)
+         //console.log(this.counter)
+         if(this.counter < this.stepsData.length - 1){
+           console.log("finish has been unloked")
+            this.unlockFinish = false
+         }
+         else{
+            this.$emit('stepperAction', this.stepsData)
+         }
       }
   }
 };
