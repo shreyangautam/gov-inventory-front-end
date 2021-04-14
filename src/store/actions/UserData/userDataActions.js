@@ -13,6 +13,7 @@ export default {
           if(response){
             console.log(response)
             context.commit('loadUserData', response.data.user_auth)
+            localStorage.setItem('token', response.data.token)
             context.commit('loadToken', response.data.token)
             return true
           }
@@ -23,6 +24,20 @@ export default {
         } catch (error) {
           console.log(error)
         }
+    },
+
+    checkToken(context){
+       if(localStorage.getItem('token')){
+         console.log(localStorage.getItem('token'))
+         context.commit('loadToken', localStorage.getItem('token'))
+       }
+    },
+
+    authLogout (context) {
+      if(localStorage.removeItem('token')){
+        console.log(localStorage.removeItem('token'))
+        context.commit('loadToken', localStorage.removeItem('token'))
       }
+    }
   
 }

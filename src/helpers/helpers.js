@@ -2,8 +2,15 @@ import axios from "axios";
 import { API_RESOURCE } from "./variables"
 
 
-/*
-@API_REQUEST - Import this function for API calls
+/**
+* API_REQUEST
+* converts string to title case - front end to Front End
+* @param {*} type - str, "can be get, post, delete, put"
+* @param {*} endpoint - str, api endpoint
+* @param {*} data - object, data to be passed
+* @param {*} params - object, search parameters
+* @headers {*} headers - object, the request header if any
+* return data of the response or null
 */
 export const API_REQUEST = async (type, endpoint, data, params, headers) => {
 
@@ -13,7 +20,8 @@ export const API_REQUEST = async (type, endpoint, data, params, headers) => {
          const GET_REQUEST = await axios({
              method: type,
              url: `${API_RESOURCE}${endpoint}`,
-             params: params ? {...params} : ''
+             params: params ? {...params} : '',
+             headers: headers ? headers : ''
          })
          let { data } = GET_REQUEST
          return data
@@ -45,6 +53,72 @@ export const API_REQUEST = async (type, endpoint, data, params, headers) => {
         return PUT_REQUEST
       }
     } catch (error) {
-      console.log(error)
+      return error.response.status
     }
+}
+
+/**
+* clearAllFields
+* clear all the values in the fields
+* @param {*} fieldsArray - array, must be array of fields
+* return array with value errased or null
+*/
+export const clearAllFields = (fieldsArray) => {
+ let copy = fieldsArray
+ fieldsArray?.map((data,idx) => {
+     copy[idx].value = ""
+     copy[idx].isError = false
+ })
+ return copy ? copy : null
+   
+}
+
+/**
+* formValidation
+* search for empty values in the field array (if required)
+* @param {*} fieldsArray - array, must be array of fields
+* return string as erro message or true if all fields have values
+*/
+
+export const formValidation = (fieldsArray) => {
+  
+  let errorCounter = 0
+  fieldsArray?.map((data) => {
+     if(data.isRequired){
+        errorCounter = !data.value && errorCounter+1
+     }
+  })
+
+  if(errorCounter > 0){
+    return "Please fill out all the required fields"
+  }
+  else{
+    return true
+  }
+
+}
+
+/**
+* alertMessageSelector
+* search for empty values in the field array (if required)
+* @param {*} selector - string, type of message you want
+* return string as message or null the selector doenst match any records
+*/
+
+export const alertMessageSelector = (fieldsArray) => {
+  
+  let errorCounter = 0
+  fieldsArray?.map((data) => {
+     if(data.isRequired){
+        errorCounter = !data.value && errorCounter+1
+     }
+  })
+
+  if(errorCounter > 0){
+    return "Please fill out all the required fields"
+  }
+  else{
+    return true
+  }
+
 }

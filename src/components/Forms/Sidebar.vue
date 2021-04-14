@@ -1,12 +1,12 @@
 <template>
     <div :class="containerSidebar">
         <div :class="Sidebar">
-            <div class="flex justify-center bg-primary">
-                <span class="py-4">
-                    <img src="../../assets/logo.png" alt="Logo" class="h-32 w-32">
+            <div class="flex justify-center bg-primary border-b border-primary mx-5">
+                <span class="py-8">
+                    <img src="../../assets/logo.png" alt="Logo" :class="provincialLogo">
                 </span>
             </div>
-            <div :class="containerProfile" class="bg-secondary">
+            <!-- <div :class="containerProfile" class="bg-secondary">
               <img src="../../assets/Me.jpg" alt="" :class="imageProfile">
                  <div :class="profileInfo">
                     <p :class="profileName">Jed Dylan Lee</p>
@@ -17,50 +17,59 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div :class="containerMenu">
                 <ul :class="menuList1">
                     <div class="px-5 mr-2 mb-2">
                         <div :class="headerContainer">
-                            <div :class="dashboardHeader">Dashboard</div>
+                            <div :class="dashboardHeader">Modules</div>
                         </div>
                     </div>
-                    <li class="transition duration-100">
-                        <a href="#" :class="menuListLink">
-                            <span :class="menuListIcon">
-                                <img src="../../assets/svg/profit-report.svg" alt="home icon" class="h-4 w-4 mr-1">
-                            </span>
-                            <span :class="menuListText">Reports</span>
-                        </a>
-                    </li>
+                    
+                    <Modules :modules="modules"/>
                 </ul>
                 <ul :class="menuList2">
                     <div class="px-5 mr-2 mb-2">
                         <div :class="headerContainer">
-                            <div :class="managementHeader">User Management</div>
+                            <div :class="managementHeader">Others</div>
                         </div>
                     </div>
                     <li class="transition duration-300">
-                        <a href="#" :class="menuListLink">
-                            <span :class="menuListIcon">
-                                <img src="../../assets/svg/profile.svg" alt="home icon" class="h-5 w-5 mr-1">
-                            </span>
-                            <span :class="menuListText">Account</span>
+                        <router-link to="/user-management">
+                        <borderTop v-if="isUserMgtActive"/>
+                        <a href="#" :class="[isUserMgtActive ? menuListLinkActive2 : menuListLink2]" @click="isUserMgtActive = true">
+                            <span :class="menuListText"><font-awesome-icon icon='user-cog' class="ml-2 mr-3"/>User Management</span>
                         </a>
+                        <borderBottom v-if="isUserMgtActive"/>
+                        </router-link>
                     </li>
                 </ul>
            </div>
         </div>
     </div> 
-    <router-view></router-view>
 </template>
 
 <script>
+import Modules from '../Accordion/Modules'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronRight, faChevronDown, faUserCog } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { sideBarNavBorderTop, sideBarNavBorderBottom} from "../../helpers/uiHelpers"
+
+library.add(faChevronRight, faChevronDown, faUserCog)
+
 export default {
+    components: {
+       "font-awesome-icon": FontAwesomeIcon,
+       "borderTop": sideBarNavBorderTop,
+       "borderBottom": sideBarNavBorderBottom,
+       Modules,
+    },
     data() {
         return {
-            containerSidebar: "min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50",
-            Sidebar: "fixed flex flex-col top-0 left-0 w-60 bg-primary h-full shadow-lg",
+            containerSidebar: "h-full flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none",
+            Sidebar: "relative flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg overscroll-none",
+            provincialLogo: "h-32 w-32",
             containerProfile: "flex items-center pl-6 h-20",
             imageProfile: 
                 "rounded-full h-10 w-10 flex items-center justify-center mr-3 border-2 border-green-500",
@@ -68,18 +77,75 @@ export default {
             profileName: "text-sm font-medium tracking-wide truncate text-white font-sans uppercase",
             profileBadge: 
                 "px-2 py-0.5 ml-auto text-xs font-semibold tracking-wide text-white bg-red-400 rounded-md",
-            containerMenu: "overflow-y-auto overflow-x-hidden flex-grow",
+            containerMenu: "overflow-y-auto overflow-x-hidden bg-primary flex-grow h-full",
             menuList1: "flex flex-col pt-6",
             menuList2: "flex flex-col pt-4",
             headerContainer: 
                 "flex flex-row items-center h-8 focus:outline-none text-gray-100 hover:text-white rounded-md border-transparent",
-            dashboardHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
+            dashboardHeader: "select-none flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-custom tracking-wide uppercase",
             managementHeader: "flex font-semibold opacity-90 text-xs text-gray-200 text-blue-300 font-sans tracking-wide uppercase",
-            menuListLink: 
-                "relative flex flex-row items-center h-10 pl-3 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white border-l-4 hover:border-blue-500 border-transparent",
-            menuListIcon: "inline-flex justify-center items-center ml-4",
-            menuListText: "ml-2 font-normal text-md truncate font-sans",
+          
+            menuListLink2: 
+                "relative flex flex-row z-20 select-none items-center h-12 focus:outline-none hover:bg-tertiary text-gray-100 hover:text-white ml-4 rounded-l-3xl border-transparent",
+         
+            menuListLinkActive2: 
+                "relative flex flex-row select-none items-center h-12 outline-none bg-gray-100 text-gray-800  text-white ml-4 rounded-l-3xl",
+           
+            menuListText: "ml-2 font-normal text-md truncate",
+          
+            
+            //UserManagement
+            isUserMgtActive: false,
+
+            modules: [
+                {
+                id: 1,
+                name: "PBAC Account",
+                collapse: false,
+                    specificPermissions: [
+                        {
+                        id: 1,
+                        name: "Purchase Request"
+                        },
+                        {
+                        id: 2,
+                        name: "Second Modules"
+                        }
+
+                    ]
+                },
+                        {
+                id: 2,
+                name: "PGSO",
+                collapse: false,
+                    specificPermissions: [
+                        {
+                        id: 1,
+                        name: "Purchase Request"
+                        },
+                        {
+                        id: 2,
+                        name: "Second Modules"
+                        }
+
+                    ]
+                }
+
+            ],
         }
-    }
+    },
+    created(){
+        console.log(this.modules)
+    },
 }
 </script>
+
+<style>
+/* FOR CUSTOM SIDEBAR BORDER */
+.custom{
+    margin-top: -40px; 
+}
+.customBottom{
+    margin-bottom: -40px;
+}
+</style>

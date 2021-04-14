@@ -5,37 +5,37 @@ import NotFound from "../pages/NotFound/NotFound"
 import Login from '../pages/Login/Login'
 import store from "../store/store"
 
-import auth from './middlewares/auth'
-import middlewarePipeline from './middlewarePipeline'
-
 const routes = [
   {
     path: '/',
-    name: 'Dashboard',
-    component: Dashboard,
-    meta: {
-      middleware: [
-          auth
-      ]
-    },    
-    children: [{
-      path: '/user-management',
-      name: 'dashboard.usermgt',
-      component: UserManagement,
-      meta: {
-        middleware: [
-            auth
-        ]
-      }
-
-     
-  }],
-
+    redirect: {
+      name: 'Dashboard'
+    }
   },
   {
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Dashboard,
+    beforeEnter: (to, from, next) => {
+      if (!localStorage.getItem('token')) {
+        next('/login')
+      }
+      else {
+        next()
+      }
+    },
+    children: [
+      {
+        path: '/user-management',
+        name: 'UserManagement',
+        component: UserManagement
+      }
+    ]
   },
   {
     path: '/:pathMatch(.*)*',
@@ -59,26 +59,6 @@ const router = createRouter({
 
 })
 
-router.beforeEach((to, from, next) => {
-  if (!to.meta.middleware) {
-      return next()
-  }
-  const middleware = to.meta.middleware
-
-  const context = {
-      to,
-      from,
-      next,
-      store
-  }
-
-
-  return middleware[0]({
-      ...context,
-      next: middlewarePipeline(context, middleware, 1)
-  })
-
-})
 
 
 

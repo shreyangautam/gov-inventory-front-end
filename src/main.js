@@ -1,7 +1,10 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import store from './store/store'
-import "./index.css"
 import router from './router'
+import VueClickAway from "vue3-click-away";
 
-createApp(App).use(store).use(router).mount('#app')
+import "./index.css"
+
+
+createApp(App).use(store).use(router).use(VueClickAway).mount('#app')
