@@ -17,6 +17,21 @@
        :isActive="user.is_active"
       />
       </div>
+      <div>
+        <div class="h-80 w-80 px-6 pt-4 rounded-lg shadow-md bg-white">
+          <div class="w-full h-auto bg-white rounded-md">
+            <Permission title="PBAC" class="border-b border-gray-100">
+                <template v-slot:role-permission>
+                  <subPermission name="Purchase Request">
+                        <template v-slot:role-subpermission>
+                          <h1 class="ml-16 mt-1">Can delete</h1>
+                        </template>
+                  </subPermission>
+                </template>
+            </Permission>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- PAGINATION -->
     <Pagination/>
@@ -28,20 +43,38 @@ import ListBelt from "../ListBelt/ListBelt"
 import UsersCards from "../Cards/UsersCards"
 import Pagination from "../ListPagination/ListPagination"
 import Searching from "../Loading/Searching"
+import Permission from '../Accordion/Permission'
+import subPermission from '../Accordion/subPermission'
 export default {
   components: {  
     ListBelt,
     UsersCards,
     Pagination,
     Searching,
+    Permission,
+    subPermission,
   },
   data(){
+    Permission
     return{
       openDropdown: false,
       listBeltConfig: {
          buttonText: "ADD NEW USER",
          buttonIcon: "user-plus"
       },
+      permissions: [
+        {
+          id: 1,
+          title: "PBAC",
+          collapse: false,
+            rolePermissions: [
+              {
+                id: 1,
+                name: "Purchase Order"
+              }
+            ]
+        }
+      ]
     }
   },
   props: {
