@@ -9,6 +9,9 @@
     <!-- CONTENT -->
     <section v-else class="flex flex-row flex-wrap relative">
     <!-- TABLE HERE -->
+    <div class="h-screen">
+
+    </div>
     </section>
     <!-- PAGINATION -->
     <Pagination/>
