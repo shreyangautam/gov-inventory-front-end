@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import UserManagement from "../pages/UserManagement/UserManagement"
+import PPMP from "../pages/PGSO/PPMP"
 import NotFound from "../pages/NotFound/NotFound"
 import Login from '../pages/Login/Login'
 import store from "../store/store"
@@ -34,7 +35,13 @@ const routes = [
         path: '/user-management',
         name: 'UserManagement',
         component: UserManagement
+      },
+      {
+        path: '/ppmp',
+        name: 'PPMP',
+        component: PPMP
       }
+
     ]
   },
   {
