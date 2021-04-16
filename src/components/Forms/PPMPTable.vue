@@ -1,61 +1,66 @@
 <template>
-  <!-- component -->
-            <div class=" w-full h-auto pb-4 mt-2 rounded-md">
-
-                <div class="w-full h-auto">
-                <table class="table-auto border-collapse w-full text-sm text-center">
+    <!-- component -->
+            <div class="bg-white border border-gray-200 pb-4 rounded-xl shadow-md w-full my-5">
+                <div class="overflow-x-auto">
+                <table class="table-auto border-collapse w-full text-center">
                     <thead>
-                    <tr class="rounded-lg font-custom tracking-wider uppercase font-medium text-gray-800">
-                        <th class=" py-4">Year</th>
-                        <th class=" py-4">Item/Equipment</th>
-                        <th class=" py-4">Quantity</th>
-                        <th class=" py-4">Unit</th>
-                        <th class="py-4">Type</th>
+                    <tr class="text-sm font-thin text-gray-700" >
+                        <th class="px-6 py-4 rounded-tl-xl" style="background-color:#f8f8f8">Date</th>
+                        <th class="px-6 py-4" style="background-color:#f8f8f8">Year</th>
+                        <th class="px-6 py-4" style="background-color:#f8f8f8">Employee Name</th>
+                        <th class="px-12 py-4 " style="background-color:#f7f8f8">Office</th>
+                        <th class="pl-16 py-4 rounded-tr-xl" style="background-color:#f7f8f8">Actions</th>
                     </tr>
                     </thead>
-                    <tbody class="text-sm font-custom bg-white rounded-lg text-gray-700 w-full">
-                    <tr class="">
-                        <td class=" py-4">2021</td>
-                        <td class=" py-4">MSI PL62 7RC</td>
-                        <td class=" py-4">10</td>
-                        <td class=" py-4">1</td>
-                        <td class=" py-4">Non-Consumable</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 space-x-4">
-                            <button class="px-2 py-2 bg-blue-500 border text-white rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                    <tbody class="text-xs font-normal text-gray-700">
+                    <tr class="hover:bg-gray-100 border-b border-gray-200 py-10 cursor-pointer">
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-12 py-4"></td>
+                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
-                            <button class="px-2 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
-                                <deleteIcon icon="delete" class="text-sm"/>
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                                <editIcon icon="edit"/>
+                            </button>
+                            <button class="px-2 py-2 border border-red-500 text-red-500 rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
+                                <deleteIcon icon="delete"/>
                             </button>
                         </td>
                     </tr>
-                    <tr class="">
-                        <td class=" py-4">2017</td>
-                        <td class=" py-4">MSI Stealth</td>
-                        <td class=" py-4">8</td>
-                        <td class=" py-4">1</td>
-                        <td class=" py-4">Non-Consumable</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 space-x-4">
-                            <button class="px-2 py-2 bg-blue-500 border text-white rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                    <tr class="hover:bg-gray-100 border-b border-gray-200 py-4">
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-12 py-4"></td>
+                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
-                            <button class="px-2 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
-                                <deleteIcon icon="delete" class="text-sm"/>
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                                <editIcon icon="edit"/>
+                            </button>
+                            <button class="px-2 py-2 border border-red-500 text-red-500 rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
+                                <deleteIcon icon="delete"/>
                             </button>
                         </td>
                     </tr>
-                    <tr class="">
-                        <td class=" py-4">2020</td>
-                        <td class=" py-4">Legion 5</td>
-                        <td class=" py-4">16</td>
-                        <td class=" py-4">1</td>
-                        <td class=" py-4">Non-Consumable</td>
-                        <td class="px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 space-x-4">
-                            <button class="px-2 py-2 bg-blue-500 border text-white rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                    <tr class="hover:bg-gray-100 border-b border-gray-200">
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-6 py-4"></td>
+                        <td class="px-12 py-4"></td>
+                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
-                            <button class="px-2 py-2 bg-red-500 border text-white rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
-                                <deleteIcon icon="delete" class="text-sm"/>
+                            <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
+                                <editIcon icon="edit"/>
+                            </button>
+                            <button class="px-2 py-2 border border-red-500 text-red-500 rounded-full transition duration-300 hover:bg-red-600 hover:text-white focus:outline-none">
+                                <deleteIcon icon="delete"/>
                             </button>
                         </td>
                     </tr>
