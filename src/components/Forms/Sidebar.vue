@@ -67,7 +67,7 @@ export default {
     },
     data() {
         return {
-            containerSidebar: "h-full flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none",
+            containerSidebar: "h-full lg:flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none sm:hidden",
             Sidebar: "relative flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg overscroll-none",
             provincialLogo: "h-32 w-32",
             containerProfile: "flex items-center pl-6 h-20",
