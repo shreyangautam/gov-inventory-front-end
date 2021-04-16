@@ -8,7 +8,7 @@
   @ACTIONS
   -buttonAction <Function> - trigger action in the component decleration
  -->
-<div class="flex flex-row justify-between px-3 mb-3">
+<div class="flex flex-row justify-between mb-3">
       <div>
         <!-- ADD USER BUTTON -->
         <button
