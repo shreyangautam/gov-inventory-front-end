@@ -47,6 +47,9 @@
            </div>
         </div>
     </div> 
+    <div class="bg-primary h-auto flex flex-col w-full lg:hidden">
+         <h1>hoy</h1>
+    </div>
 </template>
 
 <script>
@@ -67,7 +70,7 @@ export default {
     },
     data() {
         return {
-            containerSidebar: "h-full lg:flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none sm:hidden",
+            containerSidebar: "h-full lg:flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 overscroll-none sm-x-2:hidden",
             Sidebar: "relative flex flex-col top-0 left-0 w-64 bg-primary h-full shadow-lg overscroll-none",
             provincialLogo: "h-32 w-32",
             containerProfile: "flex items-center pl-6 h-20",
