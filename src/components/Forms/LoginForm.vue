@@ -16,7 +16,7 @@
         </div>
       </div>
       <div :class="rightContainer" class="right relative">
-        <div class="w-full relative px-12 lg:px-40 py-16 lg:py-32">
+        <div class="w-full relative px-12 lg:px-48 py-16 lg:py-32">
           <div class="lg:px-auto 2xl:my-auto">
           <h3 :class="loginHeader">ACCOUNT LOGIN</h3>
 
