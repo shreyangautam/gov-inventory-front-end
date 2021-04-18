@@ -23,7 +23,6 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,
-    redirect: { name: 'Home'},
     beforeEnter: (to, from, next) => {
       if (!localStorage.getItem('token')) {
         next('/login')

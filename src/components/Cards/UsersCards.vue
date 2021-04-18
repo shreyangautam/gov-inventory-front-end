@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       //Styles
-      cardContainer: "px-3 flex w-full py-3 lg:w-1/3 xl:w-1/3",
+      cardContainer: "pr-5 flex w-full py-3 sm:w-1/2 2xl:w-1/3",
       cardBody:
         "flex flex-col items-stretch min-h-full pb-4 mb-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-175 ease-in",
       cardCover: "md:flex-shrink-0",
