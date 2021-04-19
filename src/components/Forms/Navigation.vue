@@ -1,5 +1,5 @@
 <template>
-     <div class="w-full flex flex-row justify-between items-center border-b border-gray-300 h-14 ">
+     <div class="w-full flex flex-row md:justify-between sm:justify-end items-center border-b border-gray-300 h-14 ">
             <div class="hidden md:block">
               <a href=""><span class="font-normal font-custom">User Management</span></a>
               <font-awesome-icon class="text-xs text-gray-400 mx-2" icon="chevron-right"/>
