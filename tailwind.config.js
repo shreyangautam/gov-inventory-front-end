@@ -63,7 +63,7 @@ module.exports = {
 
       },
       screens: {
-        'sm-x-2': '784px',
+        'sm-x-2': '400px',
       },
       margin: {
         '-100': '-108px'

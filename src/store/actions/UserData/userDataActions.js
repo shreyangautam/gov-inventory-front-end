@@ -10,7 +10,7 @@ export default {
           //Get the data from the API
           const response = await API_REQUEST("post", "/login", bodyFormData, null, { 'Content-Type': 'multipart/form-data' });
           
-          if(response){
+          if(response.status == 200){
             console.log(response)
             context.commit('loadUserData', response.data.user_auth)
             localStorage.setItem('token', response.data.token)

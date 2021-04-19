@@ -186,12 +186,10 @@ export default {
       this.openModal = !this.openModal;
     },
     closeModal() {
-      this.fields = clearAllFields(this.fields);
-      //this.stepperData = resetStepperData(this.stepperData)
-      console.log(resetStepperData(this.stepperData))
+      this.resetUI()
       //console.log(clearAllFields(this.fields))
       this.openModal = false;
-      console.log(this.fields);
+      //console.log("Steper Data", this.stepperData);
     },
     addToCollections(label, value) {
       //console.log(value)
@@ -201,12 +199,14 @@ export default {
     },
     addUser() {
       //this.modalLoading = !this.modalLoading
+
       let result = formValidation(this.fields)
       if(result === true){
         console.log("send the data to api")
-        this.closeModal()
         this.showSuccess = true
-        
+        this.closeModal()
+        //console.log(this.fields)
+        //console.log(this.stepperData)
       }
       else{
         this.errorMessage = result
@@ -224,6 +224,10 @@ export default {
          console.log(this.stepperData)
        }
 
+    },
+    resetUI(){
+        this.fields = clearAllFields(this.fields);
+        this.stepperData = resetStepperData(this.stepperData)
     }
   },
 };

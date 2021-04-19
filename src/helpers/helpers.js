@@ -80,23 +80,26 @@ export const clearAllFields = (fieldsArray) => {
 * return array with value errased or null
 */
 export const resetStepperData = (stepperDataArray) => {
+  console.log(stepperDataArray)
   let copy = stepperDataArray
-  stepperDataArray?.map((data,idx) => {  
-    if(idx = 0){
-      copy[idx].isActive = true,
-      copy[idx].isNext = false
-    }
-    else if(idx = 1){
-      copy[idx].isActive = false,
-      copy[idx].isNext = true
-    }
-
-    copy[idx].isActive = false,
-    copy[idx].isNext = false
-  })
-  console.log(copy)
-  return copy ? copy : null
-    
+  
+    stepperDataArray?.map((data,idx) => {  
+      if(idx == 0){
+        copy[idx].isActive = true,
+        copy[idx].isNext = false
+      }
+      if(idx == 1){
+        copy[idx].isActive = false,
+        copy[idx].isNext = true
+      }
+      if(idx > 1){
+        copy[idx].isActive = false,
+        copy[idx].isNext = false
+  
+      }
+    })  
+    return copy ? copy : null
+   
  }
 
 /**

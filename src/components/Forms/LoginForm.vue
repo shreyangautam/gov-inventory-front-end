@@ -33,6 +33,7 @@
                 class="bg-gray-100"
                 :class="[isLoginFailed ? inputFieldInvalid : inputField]"
                 v-model="email"
+                @keydown="nameKeydown($event)"
               />
             </div>
             <div :class="inputContainer">
@@ -46,6 +47,7 @@
                 class="bg-gray-100"
                 :class="[isLoginFailed ? inputFieldInvalid : inputField]"
                 v-model="password"
+                @keydown="nameKeydown($event)"
               />
             </div>
             <div class="flex items-center space-x-2">
@@ -118,6 +120,11 @@ export default {
     login() {
       console.log(this.email, this.password);
     },
+    nameKeydown(e){
+      if(e.key == "Enter"){
+        this.$emit('login', this.email, this.password)
+      }
+    }
   },
 };
 </script>
