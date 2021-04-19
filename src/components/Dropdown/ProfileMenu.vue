@@ -39,11 +39,13 @@
       </a>
       <a
         href="#"
-        class="block px-2 py-2 mx-4 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
+        class="flex justify-between px-2 py-2 mx-4 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
       >
         <span class="flex">
         <settingIcon icon="gear" class="mr-2 text-sm"/> Settings
         </span>
+        <!--- Switch --->
+        <Switch :switchValue="switchValue" @switchValueChanged="switchValue = !switchValue"/>
       </a>
       <a
         href="#"
@@ -64,6 +66,7 @@ import { SETTING_SVG, LOGOUT_SVG } from '../../assets/svg_collection'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Switch from '../Accordion/Switch'
 
 library.add(faUser)
 
@@ -71,12 +74,14 @@ export default {
     data() {
         return {
             showProfDropdown: false,
+            switchValue: true,
         }  
     },
     components: {
         'font-awesome-icon': FontAwesomeIcon,
         'settingIcon': SETTING_SVG,
         'logoutIcon': LOGOUT_SVG,
+        Switch,
     },
     methods:{
         onClickAway(event) {

@@ -5,8 +5,8 @@
     -modalButtonName <String> - Name of Button
  -->
   <div class="modal-mask">
-    <div class="modal-wrapper">
-      <div class="modal-container">
+    <div class="modal-wrapper px-2 sm:px-0">
+      <div class="modal-container w-full sm:w-modal-sm">
       <!-- HEAD -->
          <div class="h-8 w-full flex justify-start items-center text-gray-900 border-b border-gray-200 pb-4">
             <div class="">
@@ -74,7 +74,6 @@ export default {
 }
 .modal-container {
   position: relative;
-  width: 550px;
   height: auto;
   margin: 0px auto;
   padding: 20px 30px;

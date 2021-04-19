@@ -8,11 +8,11 @@
   @ACTIONS
   -buttonAction <Function> - trigger action in the component decleration
  -->
-<div class="flex flex-row justify-between px-3 mb-3">
+<div class="flex flex-col-reverse sm:flex-row justify-between mb-3">
       <div>
         <!-- ADD USER BUTTON -->
         <button
-          class="inline-flex items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow-md hover:shadow-lg hover:bg-blue-700 focus:outline-none"
+          class="inline-flex w-full sm:w-40 justify-center sm:items-right px-3 py-2 text-sm font-medium leading-6 text-white uppercase hover:transition-colors duration-150 ease-in bg-blue-800 rounded shadow-md hover:shadow-lg hover:bg-blue-700 focus:outline-none"
           @click="$emit('buttonAction')"
         >
           <Icon class="mt-1" :icon="config.buttonIcon"/>
@@ -22,12 +22,12 @@
 
       </div>
       <div class="mt-1.5">
-        <span class="text-sm text-gray-500 select-none"
+        <span class="text-sm text-gray-500 select-none hidden lg:block"
           >Showing 1 to 10 of 150 results</span
         >
       </div>
       <div>
-        <div class="relative w-64">
+        <div class="relative w-full sm:w-64">
           <input
             type="text"
             id="password"

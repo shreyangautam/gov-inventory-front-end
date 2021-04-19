@@ -6,7 +6,7 @@
       <div :class="cardCover">
         <img
           src="https://images.unsplash.com/photo-1575320181282-9afab399332c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-          class="object-cover w-full rounded-lg rounded-b-none md:h-56"
+          class="object-cover w-full rounded-lg rounded-b-none h-48 md:h-56"
         />
       </div>
       <!-- MENU -->
@@ -20,7 +20,7 @@
       </div>
       <!-- MENU -->
       <div :class="userInfoBasic">
-        <div class="customPosition">
+        <div class="customMobile sm:-mt-100 sm:mb-5 ">
           <img :class="userImage" src="../../assets/svg/profile.svg" />
         </div>
         <span :class="userName"> {{ firstName }} {{ lastName }} </span>
@@ -62,7 +62,7 @@ export default {
   data() {
     return {
       //Styles
-      cardContainer: "px-3 flex w-full py-3 lg:w-1/2 xl:w-1/3",
+      cardContainer: "flex w-full",
       cardBody:
         "flex flex-col items-stretch min-h-full pb-4 mb-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-175 ease-in",
       cardCover: "md:flex-shrink-0",
@@ -70,12 +70,12 @@ export default {
       accountStatusOnline:
         "inline-block px-3 py-0 text-xs font-bold leading-6 text-center text-green-500 uppercase transition bg-transparent border-2 border-green-500 rounded-full",
       accountStatusOffline:
-        "inline-block px-3 py-0 text-xs font-bold leading-6 text-center text-gray-400 uppercase transition bg-transparent border-2 border-gray-400 rounded-full",
+        "inline-block px-1 py-0 text-xs font-bold leading-6 text-center text-gray-400 uppercase transition bg-transparent border-2 border-gray-400 rounded-full",
       accountStatusInActive:
         "inline-block px-3 py-0 text-xs font-bold leading-6 text-center text-red-500 uppercase transition bg-transparent border-2 border-red-500 rounded-full",
       userInfoBasic:
         "flex flex-col flex-wrap items-center flex-1 px-4 py-1 text-center mx-auto",
-      userImage: "h-24 w-24 md rounded-full relative",
+      userImage: "h-16 w-16 sm:w-24 sm:h-24 rounded-full relative",
       userName: "text-2xl font-bold tracking-normal text-gray-600",
       userPosition: "text-base tracking-normal text-gray-500",
       userOtherInfo:
@@ -87,3 +87,15 @@ export default {
   },
 };
 </script>
+
+<style>
+.customPosition {
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+
+.customMobile {
+  margin-top: -90px;
+  margin-bottom: 20px;
+}
+</style>

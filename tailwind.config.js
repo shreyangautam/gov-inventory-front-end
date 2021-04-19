@@ -32,10 +32,44 @@ module.exports = {
             opacity: '1',
             transform: 'translateY(0)'
           },
+        },
+        'fade-in-up': {
+          '0%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateY(-10)'
+          },
+        },
+        'draw-down': {
+          '0%': {
+            //opacity: '1',
+            transform: 'translateY(-10)'
+          },
+          '100%': {
+            //opacity: '0',
+            transform: 'translateY(0)'
+          },
         }
+
+
       },
       animation: {
-        'fade-in-down': 'fade-in-down 0.5s ease-out'
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
+        'fade-in-up': 'fade-in-up 0.2s ease-out',
+        'draw-down': 'draw-down 0.2s ease-out'
+
+      },
+      screens: {
+        'sm-x-2': '784px',
+      },
+      margin: {
+        '-100': '-108px'
+      },
+      width: {
+        'modal-sm': '550px'
       }
 
     },

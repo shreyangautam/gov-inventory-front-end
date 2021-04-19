@@ -7,30 +7,8 @@
     </div>
     
     <!-- CONTENT -->
-    <section v-else >
-      <div v-for="user in data" v-bind:key="user.id" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
-      <UsersCards
-       :email="user.email" 
-       :firstName="user.fname"
-       :lastName="user.lname"
-       :isOnline="user.is_online"
-       :isActive="user.is_active"
-      />
-      <UsersCards
-       :email="user.email" 
-       :firstName="user.fname"
-       :lastName="user.lname"
-       :isOnline="user.is_online"
-       :isActive="user.is_active"
-      />
-      <UsersCards
-       :email="user.email" 
-       :firstName="user.fname"
-       :lastName="user.lname"
-       :isOnline="user.is_online"
-       :isActive="user.is_active"
-      />
-      </div>
+    <section v-else class="flex flex-row flex-wrap relative">
+      <PPMPTable/>
     </section>
     <!-- PAGINATION -->
     <Pagination/>
@@ -44,6 +22,7 @@ import Pagination from "../ListPagination/ListPagination"
 import Searching from "../Loading/Searching"
 import Permission from '../Accordion/Permission'
 import subPermission from '../Accordion/subPermission'
+import PPMPTable from '../Forms/PPMPTable'
 export default {
   components: {  
     ListBelt,
@@ -52,14 +31,15 @@ export default {
     Searching,
     Permission,
     subPermission,
+    PPMPTable,
   },
   data(){
     Permission
     return{
       openDropdown: false,
       listBeltConfig: {
-         buttonText: "ADD NEW USER",
-         buttonIcon: "user-plus"
+         buttonText: "ADD NEW PPMP",
+         buttonIcon: "plus-square"
       },
       permissions: [
         {
@@ -86,3 +66,9 @@ export default {
 };
 </script>
 
+<style>
+.customPosition {
+  margin-top: -100px;
+  margin-bottom: 20px;
+}
+</style>

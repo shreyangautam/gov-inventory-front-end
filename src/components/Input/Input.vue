@@ -1,6 +1,6 @@
 <template>
   <div v-if="!disablePaste">
-    <label class="text-sm font-semibold px-1"
+    <label class="text-sm font-semibold px-1 text-gray-500"
       >{{ label }}<span v-if="isRequired" class="text-red-500">*</span></label
     >
     <div class="flex mt-1">
