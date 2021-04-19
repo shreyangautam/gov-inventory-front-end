@@ -8,7 +8,7 @@
     
     <!-- CONTENT -->
     <section v-else class="flex flex-row flex-wrap relative">
-      <div v-for="user in data" v-bind:key="user.id">
+      <div v-for="user in data" v-bind:key="user.id" class="flex row flex-wrap">
       <UsersCards
        :email="user.email" 
        :firstName="user.fname"
@@ -16,8 +16,24 @@
        :isOnline="user.is_online"
        :isActive="user.is_active"
       />
+            <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
       </div>
-      <div>
+      <!-- <div>
         <div class="h-80 w-80 px-6 pt-4 rounded-lg shadow-md bg-white">
           <div class="w-full h-auto bg-white rounded-md">
             <Permission title="PBAC" class="border-b border-gray-100">
@@ -31,7 +47,7 @@
             </Permission>
           </div>
         </div>
-      </div>
+      </div> -->
     </section>
     <!-- PAGINATION -->
     <Pagination/>
