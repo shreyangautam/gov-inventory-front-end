@@ -79,7 +79,7 @@ export default {
       loginContainer:
         "relative flex flex-col overflow-hidden bg-primary shadow-lg max md:flex-row md:flex-1 w-full xl:w-screen xl:h-screen sm:h-screen",
       leftContainer:
-        "w-full h-screen my-auto mx-auto text-white bg-primary md:w-3/6 md:flex-shrink-0 md:justify-evenly flex justify-center",
+        "w-full h-screen hidden md:block my-auto mx-auto text-white bg-primary md:w-3/6 md:flex-shrink-0 md:justify-evenly flex justify-center",
       nameStyle: "text-3xl font-bold tracking-wider text-center gap-2 flex justify-center items-center",
       descriptionStyle: "mt-6 font-normal text-center text-gray-300 md:mt-0",
       rightContainer: "w-full h-screen bg-primaryDark md:flex-1",
