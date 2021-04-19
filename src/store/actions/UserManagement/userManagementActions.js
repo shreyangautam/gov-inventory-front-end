@@ -13,7 +13,7 @@ export default {
                 return 'UNAUTHORIZED'
             }
             else{
-                context.commit('loadUsersList', response)
+                context.commit('loadUsersList', response.data)
             }
             //return response
           

@@ -1,10 +1,10 @@
 <template>
-  <div class="flex min-h-screen">
-    <div class="w-64 flex-shrink-0">
+  <div class="relative flex min-h-screen flex-col lg:flex-row">
+    <div class="flex-shrink-0 w-full lg:w-64">
       <Sidebar/>
     </div>
-    <div class="relative flex flex-col w-full bg-primary pr-5 py-5 ">
-      <div class="relative flex flex-col w-full bg-gray-100 p-8 rounded-3xl">
+    <div class="relative min-h-screen flex flex-col w-full bg-primary pl-8 pr-8 py-8 lg:pl-0">
+      <div class="relative flex flex-col w-full h-auto bg-gray-100 p-8 rounded-3xl">
           <Navigation/>
            <router-view>
            </router-view>
