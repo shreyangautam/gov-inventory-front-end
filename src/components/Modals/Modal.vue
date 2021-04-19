@@ -5,8 +5,8 @@
     -modalButtonName <String> - Name of Button
  -->
   <div class="modal-mask">
-    <div class="modal-wrapper px-2 sm:px-0">
-      <div class="modal-container w-full sm:w-modal-sm">
+    <div class="modal-wrapper p-3 sm:px-0">
+      <div class="modal-container w-full h-full sm:h-auto sm:w-modal-sm overflow-scroll sm:overflow-hidden">
       <!-- HEAD -->
          <div class="h-8 w-full flex justify-start items-center text-gray-900 border-b border-gray-200 pb-4">
             <div class="">

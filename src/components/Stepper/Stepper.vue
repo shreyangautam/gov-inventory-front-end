@@ -44,15 +44,15 @@ export default {
       counter: 0, 
       unlockFinish: false,     
       //STYLES
-      activeStep: "bg-green-100 w-full py-5 pl-4 text-xs font-medium tracking-wide text-green-600 select-none",
+      activeStep: "bg-green-100 w-full h-full py-5 pl-4 text-xs font-medium tracking-wide text-green-600 select-none",
       activeStepName: "text-sm font-bold tracking-wide text-green-600 select-none",
       
       //Next
-      nextStep: "w-full py-5 pl-4 text-xs font-medium tracking-wide text-gray-400 select-none",
+      nextStep: "w-full h-full py-5 pl-4 text-xs font-medium tracking-wide text-gray-400 select-none",
       nextStepName: "text-sm font-bold tracking-wide text-gray-600 mt-10 select-none",
 
       //default
-      defaultStep: "w-full py-5 pl-4 text-xs font-medium tracking-wide text-gray-300 select-none",
+      defaultStep: "w-full h-full py-5 pl-4 text-xs font-medium tracking-wide text-gray-300 select-none",
       defaultStepName: "text-sm font-bold tracking-wide text-gray-400 mt-10 select-none"
     };
   },

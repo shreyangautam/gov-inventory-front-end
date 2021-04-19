@@ -62,8 +62,8 @@
          
           />
         </div>
-        <div class="flex">
-          <div class="w-1/2 px-3 mb-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 px-3 pb-3">
+          
             <Input
               label="Email Address"
               placeholder="user@email.com"
@@ -73,16 +73,14 @@
               type="text"
               :value="fields[3].value"
             />
-          </div>
 
-          <div class="w-1/2 px-3 mb-5">
+
             <Input
               label="Mobile Number"
               placeholder="09XX XXX XXXX"
               maxLength="11"
               type="numeric"
             />
-          </div>
         </div>
         </div>
          <div v-if="stepperData[1].isActive">You are in Roles</div>
@@ -179,7 +177,7 @@ export default {
     async getUserList() {
       let result = await store.dispatch("getUsersList");
       if (result === "UNAUTHORIZED") {
-        this.$router.push("/");
+        this.$router.push("/login");
       } else {
         setTimeout(() => (this.isLoading = false), 1000);
       }
