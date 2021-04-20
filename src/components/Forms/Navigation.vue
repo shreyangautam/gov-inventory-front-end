@@ -1,9 +1,9 @@
 <template>
      <div class="w-full flex flex-row  justify-end md:justify-between  items-center border-b border-gray-200 h-14 ">
             <div class="hidden md:block">
-              <a href=""><span class="font-normal font-custom">User Management</span></a>
+              <a href=""><span class="font-normal text-md text-gray-400 font-custom">User Management</span></a>
               <font-awesome-icon class="text-xs text-gray-400 mx-2" icon="chevron-right"/>
-              <a href=""><span class="font-medium text-blue-600 font-custom">Dashboard</span></a>
+              <a href=""><span class="font-medium text-md text-blue-500 font-custom">Dashboard</span></a>
             </div>
             <div>
               <div class="flex justify-between items-center w-full gap-2">
