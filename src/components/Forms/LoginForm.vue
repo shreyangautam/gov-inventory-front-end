@@ -16,10 +16,10 @@
         </div>
       </div>
       <div :class="rightContainer" class="right relative">
-        <div class="w-full relative px-16 lg:px-48 py-16 lg:py-32">
+        <div class="w-full relative px-12 lg:px-48 py-10 lg:py-32">
           <div class="lg:px-auto 2xl:my-auto">
+          <img src="logo.png" alt="mobile-logo" class="lg:hidden h-20 w-20 mx-auto mb-5">
           <h3 :class="loginHeader">ACCOUNT LOGIN</h3>
-
           <h3 :class="invalidMsg" v-if="isLoginFailed">{{isLoginFailed ? 'Invalid Email or Password' : ''}}</h3>
           <Loading v-if="isLoading"/>
           <div :class="space" v-if="!isLoading && !isLoginFailed"></div>
@@ -85,7 +85,7 @@ export default {
       nameStyle: "text-3xl font-bold tracking-wider text-center gap-2 flex justify-center items-center",
       descriptionStyle: "mt-6 font-normal text-center text-gray-300 md:mt-0",
       rightContainer: "w-full h-screen bg-primaryDark md:flex-1",
-      loginHeader: "my-4 text-2xl font-semibold text-white",
+      loginHeader: "text-2xl font-semibold text-white text-center lg:text-left",
       formStyle: "flex flex-col space-y-5",
       inputContainer: "flex flex-col space-y-1 w-full",
       inputLabel: "text-sm font-semibold text-white",

@@ -3,8 +3,8 @@
     <div class="flex-shrink-0 w-full lg:w-64">
       <Sidebar/>
     </div>
-    <div class="relative min-h-screen flex flex-col w-full bg-primary px-3 sm:px-8 py-8 lg:pl-0">
-      <div class="relative flex flex-col w-full h-auto bg-gray-100 p-8 rounded-3xl">
+    <div class="relative min-h-screen flex flex-col w-full bg-primary px-3 sm:px-8 py-4 lg:py-8 lg:pl-0">
+      <div class="relative flex flex-col w-full h-auto bg-gray-100 px-5 py-1 rounded-3xl">
           <Navigation/>
            <router-view>
            </router-view>

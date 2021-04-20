@@ -1,14 +1,14 @@
 <template>
-     <div class="w-full flex flex-row justify-between items-center border-b border-gray-300 h-14 px-3">
-            <div class="">
+     <div class="w-full flex flex-row  justify-end md:justify-between  items-center border-b border-gray-300 h-14 ">
+            <div class="hidden md:block">
               <a href=""><span class="font-normal font-custom">User Management</span></a>
               <font-awesome-icon class="text-xs text-gray-400 mx-2" icon="chevron-right"/>
               <a href=""><span class="font-medium text-blue-600 font-custom">Dashboard</span></a>
             </div>
             <div>
               <div class="flex justify-between items-center w-full gap-2">
-                <div class="w-full flex justify-end px-2">
-                        <div class="w-full sm:w-52 inline-block relative ">
+                <div class="w-full flex justify-end">
+                        <div class="w-full sm:w-full inline-block relative ">
                         <input type="" name="" class="leading-snug border border-gray-300 outline-none block w-full appearance-none bg-gray-200 text-sm text-gray-600 py-1 px-4 pl-8 rounded-2xl h-8" placeholder="Search.." />
 
                         <div class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-400">
