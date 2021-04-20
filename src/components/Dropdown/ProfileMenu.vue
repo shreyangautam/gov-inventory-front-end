@@ -21,7 +21,7 @@
     <div
       v-if="showProfDropdown"
       v-click-away="onClickAway"
-      class="absolute right-14 mt-2 py-4 w-56 bg-primary rounded-md shadow-2xl z-20"
+      class="absolute right-6 mt-2 py-4 w-56 bg-primary rounded-md shadow-2xl z-20"
     >
       <div class="px-6 pb-4 border-b border-primary">
           <a href="" class="flex flex-col">
