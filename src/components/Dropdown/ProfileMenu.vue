@@ -29,6 +29,7 @@
             <span class="text-white font-custom opacity-80 text-xs">Jr. Frontend Developer</span>
           </a>
       </div>
+       <router-link to="/profile">
       <a
         href="#"
         class="block px-2.5 py-2 mx-4 mt-2 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
@@ -37,6 +38,7 @@
         <font-awesome-icon icon="user" class="mr-2 text-sm"/> Profile
         </span>
       </a>
+       </router-link>
       <a
         href="#"
         class="flex justify-between px-2 py-2 mx-4 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
