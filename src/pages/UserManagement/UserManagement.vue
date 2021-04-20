@@ -227,7 +227,7 @@ export default {
     },
     resetUI(){
         this.fields = clearAllFields(this.fields);
-        this.stepperData = resetStepperData(this.stepperData)
+        //this.stepperData = resetStepperData(this.stepperData)
     }
   },
 };
