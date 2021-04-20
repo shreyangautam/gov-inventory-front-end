@@ -4,7 +4,7 @@
                 <div class="overflow-x-auto">
                 <table class="table-auto border-collapse w-full text-center">
                     <thead>
-                    <tr class="text-sm font-thin text-gray-700" >
+                    <tr class="text-sm whitespace-nowrap font-thin text-gray-700" >
                         <th class="px-6 py-4 rounded-tl-xl" style="background-color:#f8f8f8">Date</th>
                         <th class="px-6 py-4" style="background-color:#f8f8f8">Year</th>
                         <th class="px-6 py-4" style="background-color:#f8f8f8">Employee Name</th>
@@ -18,7 +18,7 @@
                         <td class="px-6 py-4"></td>
                         <td class="px-6 py-4"></td>
                         <td class="px-12 py-4"></td>
-                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                        <td class="pr-10 py-4 whitespace-nowrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
                             <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
@@ -35,7 +35,7 @@
                         <td class="px-6 py-4"></td>
                         <td class="px-6 py-4"></td>
                         <td class="px-12 py-4"></td>
-                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                        <td class="pr-10 py-4 whitespace-nowrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
                             <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
@@ -52,7 +52,7 @@
                         <td class="px-6 py-4"></td>
                         <td class="px-6 py-4"></td>
                         <td class="px-12 py-4"></td>
-                        <td class="pr-10 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
+                        <td class="pr-10 py-4 whitespace-nowrap text-right border-b border-gray-200 text-sm leading-5 space-x-4">
                             <button class="px-2 py-2 border border-blue-500 text-blue-500 rounded-full transition duration-300 hover:bg-blue-600 hover:text-white focus:outline-none">
                                 <editIcon icon="edit"/>
                             </button>
