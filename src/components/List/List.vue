@@ -16,20 +16,6 @@
        :isOnline="user.is_online"
        :isActive="user.is_active"
       />
-      <UsersCards
-       :email="user.email" 
-       :firstName="user.fname"
-       :lastName="user.lname"
-       :isOnline="user.is_online"
-       :isActive="user.is_active"
-      />
-      <UsersCards
-       :email="user.email" 
-       :firstName="user.fname"
-       :lastName="user.lname"
-       :isOnline="user.is_online"
-       :isActive="user.is_active"
-      />
       </div>
     </section>
     <!-- PAGINATION -->
