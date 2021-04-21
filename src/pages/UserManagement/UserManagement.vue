@@ -97,10 +97,10 @@
                   isTextOnly
                 />
               </div>
-              <div class="w-full px-4 mb-5">
+              <div class="relative w-full px-4 mb-5">
                 <ModalHeadings text="or do you want to copy from existing role?"
                 align="start"/>
-                <DataList label="Role" name="Existing Role" :data="dropdownTest" />
+                <DataList label="Role" name="Existing Role" :data="dropdownTest" placeholder="Search role..."/>
 
               </div>
             </div>

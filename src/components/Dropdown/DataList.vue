@@ -1,14 +1,14 @@
 <template>
-  <div>
+  <div class="relative">
     <label class="text-sm font-semibold text-gray-500 pl-1">{{ label }}</label>
     <div class="relative w-full">
       <input
         type="text"
         @input="(event) => search(event)"
-        :value="value"
+        v-model="value"
         id="password"
         class="rounded-lg border-2 text-gray-600 border-gray-200 focus:outline-none focus:border-blue-500 p-3 w-full"
-        placeholder="Search..."
+        :placeholder="placeholder"
       />
       <button
         class="block w-7 h-7 text-center text-xl leading-0 absolute top-3 right-2 text-gray-500 focus:outline-none hover:text-gray-600 transition-colors"
@@ -28,11 +28,13 @@
       <div
         v-if="showDropdown"
         v-click-away="onClickAway"
-        class="absolute py-2 w-60 bg-blue-800 rounded-md shadow-xl z-50 my-2"
+        class="absolute py-1 px-1 w-full bg-white rounded-lg shadow-xl z-50 my-2 border-2 border-gray-200"
       >
+        <span class="block text-base text-gray-600 px-4 py-3" v-if="!optionFound">Option Not found</span>
         <a
           href="#"
-          class="block px-4 py-2 text-sm text-white hover:bg-blue-900 hover:text-white"
+          v-else
+          class="block px-4 py-3 text-base rounded-lg text-gray-600 hover:bg-blue-900 hover:text-white"
           v-for="info in dataList"
           :key="info"
           @click="setActiveSelection(info)"
@@ -51,6 +53,7 @@ export default {
   data() {
     return {
       showDropdown: false,
+      optionFound: true,
       selectedData: "",
       activeMonth: "",
       value: '',
@@ -63,6 +66,7 @@ export default {
     label: String,
     data: Array,
     name: String,
+    placeholder: String
   },
   created() {},
   components: {
@@ -72,7 +76,10 @@ export default {
   methods: {
     onClickAway(event) {
       this.showDropdown = !this.showDropdown;
-      this.value = "";
+      if(!this.optionFound){
+        this.value = null;
+      }   
+      console.log(this.value)
     },
     setActiveSelection(data) {
       this.value = data;
@@ -85,8 +92,10 @@ export default {
       this.dataList = this.data.filter((data) => e.target.value && globalRegex.test(data)).length > 0 ? this.data.filter((data) => globalRegex.test(data)) : !e.target.value ? this.data.slice(0, 4) : ["Option Not Found"]
       console.log(this.dataList)
       if(this.dataList[0] === "Option Not Found"){
-          console.log("link must be disabled")
-          this.value = ""
+          this.optionFound = false
+      }
+      else{
+          this.optionFound = true
       }
     }
   },
