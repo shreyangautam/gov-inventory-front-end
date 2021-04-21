@@ -1,12 +1,12 @@
 <template>
     <div>
-      <h1 class="font-medium text-lg pl-3 pt-7 pb-5 text-gray-500 font-custom tracking-normal">Account Profile</h1>
+      <h1 class="font-medium text-lg pl-3 pt-7 pb-5 text-gray-500 font-custom whitespace-nowrap tracking-normal">Account Profile</h1>
       <div class="bg-white rounded-md w-full h-auto shadow-md py-4 lg:py-4 mb-6">
         <div class="relative flex flex-col w-full h-auto py-1">
           <!--- Content Container --->
           <div class="flex flex-col md:flex-row">
             <!--- Profile --->
-            <div class="flex w-full border-r border-gray-100 px-4 py-1 justify-center items-center md:justify-center lg:justify-start">
+            <div class="flex w-full border-r border-gray-100 whitespace-nowrap px-4 py-1 justify-center items-center md:justify-center lg:justify-start">
               <span class="h-auto mr-5">
                 <img src="../../assets/Me2.jpg" alt="" class="rounded-full flex items-center justify-center border-2 w-20 lg:w-32 border-gray-100">
               </span>
