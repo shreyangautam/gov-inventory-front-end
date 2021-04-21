@@ -76,10 +76,9 @@ export default {
   methods: {
     onClickAway(event) {
       this.showDropdown = !this.showDropdown;
-      if(!this.optionFound){
+  
         this.value = null;
-      }   
-      console.log(this.value)
+      
     },
     setActiveSelection(data) {
       this.value = data;
