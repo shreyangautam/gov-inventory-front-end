@@ -19,7 +19,7 @@
   <slot name="stepper-pages"> </slot>
 
   <!-- Buttons -->
-  <div class="flex justify-between gap-4 mt-1 px-3">
+  <div class="flex justify-between gap-4 mt-3 px-3">
     <button
       class="inline-flex items-right pl-1 py-2 text-md font-medium leading-6 text-gray-400 hover:transition-colors duration-150 ease-in border-none hover:text-gray-500 focus:outline-none"
       @click="previous"
