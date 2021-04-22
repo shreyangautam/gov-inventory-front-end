@@ -67,15 +67,15 @@
           </div>
           <!-- Account Profile Navigation -->
           <div class="px-3 pb-2.5 mt-2.5 md:mt-0 md:pb-0">
-            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-6 py-1 font-custom font-normal text-sm text-gray-500">
+            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-6">
               <li class="">
-                <a href="" class="flex items-center md:py-3 lg:py-3">
+                <a href="#" :class="[isFocus ? isActive : isNotActive]">
                   <shieldIcon icon="Account-Icon" class="mr-2"/>
                   Account
                 </a>
               </li>
               <li class="">
-                <a href="" class="flex items-center md:py-3 lg:py-3">
+                <a href="#" :class="[isFocus ? isActive : isNotActive]">
                   <keyIcon icon="ChangePass-Icon" class="mr-2 h-5 w-5"/>
                   Change Password
                 </a>
@@ -96,7 +96,17 @@ export default {
     cameraIcon: CAMERA_SVG,
     shieldIcon: SHIELD_SVG,
     keyIcon: KEY_SVG,
-  }
+  },
+
+  data() {
+    return {
+      isFocus: false,
+
+      // Active
+      isActive: "flex items-center md:py-3 lg:py-3 font-custom font-medium text-sm text-gray-700 border-b-2 border-indigo-800",
+      isNotActive: "flex items-center md:py-3 lg:py-3 font-custom font-normal text-sm text-gray-500 border-b-2 border-white",
+    }
+  },
 }
 </script>
 
