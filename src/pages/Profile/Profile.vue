@@ -66,8 +66,8 @@
             </div>
           </div>
           <!-- Account Profile Navigation -->
-          <div class="px-3 pb-2.5 mt-2.5 md:mt-0 md:pb-0">
-            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-6">
+          <div class="px-3 pb-2.5 mt-4 md:mt-0 md:pb-0">
+            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-4">
               <li class="">
                 <a href="#" :class="[isFocus ? isActive : isNotActive]">
                   <shieldIcon icon="Account-Icon" class="mr-2"/>
