@@ -4,9 +4,9 @@
     -modalTitle <String> - Title
     -modalButtonName <String> - Name of Button
  -->
-  <div class="modal-mask">
-    <div class="modal-wrapper">
-      <div class="modal-container">
+  <div class="modal-mask z-40">
+    <div class="modal-wrapper p-3 sm:px-0 z-40">
+      <div class="modal-container w-full h-full sm-x-2:h-auto sm:w-modal-sm overflow-y-auto sm:overflow-visible z-40">
       <!-- HEAD -->
          <div class="h-8 w-full flex justify-start items-center text-gray-900 border-b border-gray-200 pb-4">
             <div class="">
@@ -17,7 +17,9 @@
             </div>
          </div>
         <!-- CONTENT -->
-        <slot name="modal-content"> </slot>
+        <slot name="modal-content"> 
+          
+        </slot>
         <!-- CONTENT -->
         <div class="flex justify-end gap-4 mt-1" v-if="!disableDefaultButtons">
           <button
@@ -57,7 +59,6 @@ export default {
 <style>
 .modal-mask {
   position: fixed;
-  z-index: 9998;
   top: 0;
   left: 0;
   width: 100%;
@@ -72,7 +73,6 @@ export default {
 }
 .modal-container {
   position: relative;
-  width: 550px;
   height: auto;
   margin: 0px auto;
   padding: 20px 30px;

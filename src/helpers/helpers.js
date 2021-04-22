@@ -74,6 +74,35 @@ export const clearAllFields = (fieldsArray) => {
 }
 
 /**
+* resetStepperData
+* clear all the values in the fields
+* @param {*} stepperDataArray - array, must be array of fields
+* return array with value errased or null
+*/
+// export const resetStepperData = (stepperDataArray) => {
+//   console.log(stepperDataArray)
+//   let copy = stepperDataArray
+  
+//     stepperDataArray?.map((data,idx) => {  
+//       if(idx == 0){
+//         copy[idx].isActive = true,
+//         copy[idx].isNext = false
+//       }
+//       if(idx == 1){
+//         copy[idx].isActive = false,
+//         copy[idx].isNext = true
+//       }
+//       if(idx > 1){
+//         copy[idx].isActive = false,
+//         copy[idx].isNext = false
+  
+//       }
+//     })  
+//     return copy ? copy : null
+   
+//  }
+
+/**
 * formValidation
 * search for empty values in the field array (if required)
 * @param {*} fieldsArray - array, must be array of fields

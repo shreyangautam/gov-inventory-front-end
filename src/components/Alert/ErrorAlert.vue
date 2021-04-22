@@ -1,13 +1,14 @@
 <template>
     <transition name="fade">
-        <div class="popup-modal" v-if="isVisible">
+        <div class="popup-modal">
             <div class="window border-t-8 border-red-500" >
                 <div :class="messageIcon">
                     <font-awesome-icon icon="exclamation-circle"/>
                 </div>
-                <div class="text-lg font-semibold">Error Message</div>
+                <div class="text-lg font-semibold">{{message}}</div>
                 <div>
-                    <button class="px-4 py-1 mt-4 text-sm font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none antialiased">Close</button>
+                    <button class="px-4 py-1 mt-4 text-sm font-semibold leading-6 text-red-500 uppercase hover:transition-colors duration-150 ease-in border border-red-500 rounded-2xl shadow-md hover:shadow-lg hover:bg-red-500 hover:text-white focus:outline-none antialiased"
+                    @click="$emit('closeAlert')">Close</button>
                 </div>
             </div>
         </div>
@@ -31,18 +32,7 @@ export default {
     },
     data: () => ({
         messageIcon: "text-center text-6xl text-red-500 mb-5",
-        isVisible: false,
     }),
-
-    methods: {
-        open() {
-            this.isVisible = true
-        },
-
-        close() {
-            this.isVisible = false
-        },
-    },
 }
 </script>
 

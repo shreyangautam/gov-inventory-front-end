@@ -7,8 +7,8 @@
     </div>
     
     <!-- CONTENT -->
-    <section v-else class="flex flex-row flex-wrap relative">
-      <div v-for="user in data" v-bind:key="user.id" class="w-full flex flex-row">
+    <section v-else >
+      <div v-for="user in data" v-bind:key="user.id" class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
       <UsersCards
        :email="user.email" 
        :firstName="user.fname"
@@ -72,9 +72,3 @@ export default {
 };
 </script>
 
-<style>
-.customPosition {
-  margin-top: -100px;
-  margin-bottom: 20px;
-}
-</style>

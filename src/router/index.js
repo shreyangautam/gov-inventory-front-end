@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from '../pages/Dashboard/Dashboard'
 import UserManagement from "../pages/UserManagement/UserManagement"
 import PPMP from "../pages/PGSO/PPMP"
+import Profile from "../pages/Profile/Profile"
 import Home from "../pages/Home/Home"
 import NotFound from "../pages/NotFound/NotFound"
 import Login from '../pages/Login/Login'
@@ -23,7 +24,6 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: Dashboard,
-    redirect: { name: 'Home'},
     beforeEnter: (to, from, next) => {
       if (!localStorage.getItem('token')) {
         next('/login')
@@ -38,7 +38,11 @@ const routes = [
         name: 'Home',
         component: Home
       },
-
+      {
+        path: '/profile',
+        name: 'Profile',
+        component: Profile
+      },
       {
         path: '/user-management',
         name: 'UserManagement',

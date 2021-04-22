@@ -9,6 +9,7 @@
         :maxlength="maxLength"
         :class="[isError ? inputError : inputStyle]"
         :placeholder="placeholder"
+        :value="value"
         @paste.prevent
         @input="returnValues"
         @keydown="nameKeydown($event)"
@@ -39,6 +40,7 @@ export default {
     maxLength: String,
     disablePaste: Boolean,
     isTextOnly: Boolean,
+    value: String
   },
   methods: {
     nameKeydown(e) {

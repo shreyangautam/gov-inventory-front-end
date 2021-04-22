@@ -5,7 +5,7 @@
       class="relative z-10 block rounded-md text-gray-600 focus:outline-none hover:text-blue-800"
     >
        <span class="cursor-pointer">
-        <img src="../../assets/Me.jpg" alt="" class="rounded-full flex items-center justify-center border-2 h-8 w-8 border-gray-300">
+        <img src="../../assets/Me2.jpg" alt="" class="rounded-full flex items-center object-cover justify-center border-2 h-9 w-9 border-gray-200">
        </span>
     </button>
    
@@ -21,7 +21,7 @@
     <div
       v-if="showProfDropdown"
       v-click-away="onClickAway"
-      class="absolute right-14 mt-2 py-4 w-56 bg-primary rounded-md shadow-2xl z-20"
+      class="absolute right-6 mt-2 py-4 w-56 bg-primary rounded-md shadow-2xl z-20"
     >
       <div class="px-6 pb-4 border-b border-primary">
           <a href="" class="flex flex-col">
@@ -29,6 +29,7 @@
             <span class="text-white font-custom opacity-80 text-xs">Jr. Frontend Developer</span>
           </a>
       </div>
+       <router-link to="/profile">
       <a
         href="#"
         class="block px-2.5 py-2 mx-4 mt-2 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
@@ -37,13 +38,16 @@
         <font-awesome-icon icon="user" class="mr-2 text-sm"/> Profile
         </span>
       </a>
+       </router-link>
       <a
         href="#"
-        class="block px-2 py-2 mx-4 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
+        class="flex justify-between px-2 py-2 mx-4 rounded-md text-sm capitalize text-gray-300 font-custom hover:bg-primaryDark hover:text-white"
       >
         <span class="flex">
         <settingIcon icon="gear" class="mr-2 text-sm"/> Settings
         </span>
+        <!--- Switch --->
+        <Switch :switchValue="switchValue" @switchValueChanged="switchValue = !switchValue"/>
       </a>
       <a
         href="#"
@@ -64,6 +68,7 @@ import { SETTING_SVG, LOGOUT_SVG } from '../../assets/svg_collection'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import Switch from '../Accordion/Switch'
 
 library.add(faUser)
 
@@ -71,12 +76,14 @@ export default {
     data() {
         return {
             showProfDropdown: false,
+            switchValue: true,
         }  
     },
     components: {
         'font-awesome-icon': FontAwesomeIcon,
         'settingIcon': SETTING_SVG,
         'logoutIcon': LOGOUT_SVG,
+        Switch,
     },
     methods:{
         onClickAway(event) {
