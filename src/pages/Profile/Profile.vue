@@ -7,9 +7,14 @@
           <div class="flex flex-col md:flex-row">
             <!--- Profile --->
             <div class="flex w-full border-r border-gray-100 whitespace-nowrap px-4 py-1 justify-center items-center md:justify-center lg:justify-start">
-              <span class="h-auto mr-5">
-                <img src="../../assets/Me2.jpg" alt="" class="rounded-full flex items-center justify-center border-2 w-20 lg:w-32 border-gray-100">
-              </span>
+              <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative items-center justify-center mr-4">
+                <img src="../../assets/Me2.jpg" alt="" class="rounded-full">
+                <div class="absolute mb-0 mr-0 md:mb-1 md:mr-1 flex items-center justify-center bottom-0 right-0 bg-theme-1 rounded-full p-1">
+                  <a href="#" class="px-1.5 py-1.5 md:py-2 md:px-2 rounded-full bg-blue-800">
+                    <cameraIcon icon="Camera" class="h-4 w-4 text-white"/>
+                  </a>
+                </div>
+              </div>
               <div class="flex items-center">
                 <div class="flex flex-col">
                   <p class="font-semibold text-xl text-gray-600 mb-0.5">Jed Dylan Lee</p>
@@ -55,11 +60,12 @@
 </template>
 
 <script>
-import { GMAIL_SVG, PHONE_SVG } from '../../assets/svg_collection'
+import { GMAIL_SVG, PHONE_SVG, CAMERA_SVG } from '../../assets/svg_collection'
 export default {
   components: {
     gmailIcon: GMAIL_SVG,
     phoneIcon: PHONE_SVG,
+    cameraIcon: CAMERA_SVG,
   }
 }
 </script>
