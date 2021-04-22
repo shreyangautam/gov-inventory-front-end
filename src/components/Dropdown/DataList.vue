@@ -59,14 +59,14 @@ export default {
       value: '',
       dataList: [],
       linkDisabled: false
-      
     };
   },
   props: {
     label: String,
     data: Array,
     name: String,
-    placeholder: String
+    placeholder: String,
+    canAddOption: Boolean
   },
   created() {},
   components: {
