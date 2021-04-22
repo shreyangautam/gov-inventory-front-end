@@ -2,7 +2,7 @@
     <div>
       <h1 class="font-medium text-lg pl-3 pt-7 pb-5 text-gray-500 font-custom whitespace-nowrap tracking-normal">Account Profile</h1>
       <!--- Account Profile --->
-      <div class="bg-white rounded-md w-full h-auto shadow-md">
+      <div class="bg-white rounded-md w-full h-auto shadow-sm">
         <div class="intro-y box px-5 pt-5 mt-1 mb-4">
           <!--- Content Container --->
           <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
