@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1 class="font-medium text-lg pl-3 pt-7 pb-5 text-gray-500 font-custom whitespace-nowrap tracking-normal">Account Profile</h1>
+      <h1 class="font-medium text-lg pt-7 pb-5 text-gray-500 font-custom whitespace-nowrap tracking-normal">Account Profile</h1>
       <!--- Account Profile --->
       <div class="bg-white rounded-md w-full h-auto shadow-sm">
         <div class="intro-y box px-5 pt-5 mt-1 mb-4">
