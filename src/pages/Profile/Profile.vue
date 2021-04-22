@@ -10,7 +10,7 @@
               <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative items-center justify-center mr-4">
                 <img src="../../assets/Me2.jpg" alt="" class="rounded-full">
                 <div class="absolute mb-0 mr-0 md:mb-1 md:mr-1 flex items-center justify-center bottom-0 right-0 bg-theme-1 rounded-full p-1">
-                  <a href="#" class="px-1.5 py-1.5 md:py-2 md:px-2 rounded-full bg-blue-800">
+                  <a href="#" class="px-1.5 py-1.5 md:py-2 md:px-2 rounded-full bg-blue-800 hover:bg-blue-700">
                     <cameraIcon icon="Camera" class="h-4 w-4 text-white"/>
                   </a>
                 </div>
