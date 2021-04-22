@@ -5,7 +5,7 @@
       class="relative z-10 block rounded-md text-gray-600 focus:outline-none hover:text-blue-800"
     >
        <span class="cursor-pointer">
-        <img src="../../assets/Me.jpg" alt="" class="rounded-full flex items-center justify-center border-2 h-8 w-8 border-gray-200">
+        <img src="../../assets/Me2.jpg" alt="" class="rounded-full flex items-center object-cover justify-center border-2 h-9 w-9 border-gray-200">
        </span>
     </button>
    
