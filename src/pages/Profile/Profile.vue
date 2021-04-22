@@ -67,7 +67,7 @@
           </div>
           <!-- Account Profile Navigation -->
           <div class="px-3 pb-2.5 mt-2.5 md:mt-0 md:pb-0">
-            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-6 py-1 font-custom font-normal text-sm">
+            <ul class="flex flex-col md:flex-row lg:flex-row justify-start gap-6 py-1 font-custom font-normal text-sm text-gray-500">
               <li class="">
                 <a href="" class="flex items-center md:py-3 lg:py-3">
                   <shieldIcon icon="Account-Icon" class="mr-2"/>
