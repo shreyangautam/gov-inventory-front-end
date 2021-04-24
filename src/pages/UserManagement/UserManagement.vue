@@ -108,7 +108,7 @@
                <div class="w-full px-4 mb-5">
                   <Accordion title="PGSO">
                     <template v-slot:accordion-content>
-                    <h1>This is an accordion</h1>
+                    <span>This is an accordion</span>
                     </template>
                   </Accordion>
                </div>
