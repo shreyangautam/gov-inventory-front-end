@@ -32,7 +32,6 @@ export default {
     PPMPTable,
   },
   data(){
-    Permission
     return{
       openDropdown: false,
       listBeltConfig: {
