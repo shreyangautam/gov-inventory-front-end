@@ -36,7 +36,7 @@
               </div>
             </div>
             <!--- Transaction Details --->
-            <div class="mt-6 lg:mt-0 flex-1 font-custom flex items-center justify-center px-14 gap-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 font-custom flex items-center justify-center px-12 gap-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 pt-5 lg:pt-0">
               <div class="text-center rounded-md w-20 py-3">
                 <div class="font-medium text-blue-800 text-xl">
                   201
