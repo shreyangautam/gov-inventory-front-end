@@ -5,7 +5,7 @@
       <div class="bg-white rounded-md w-full h-auto shadow-sm">
         <div class="intro-y box px-5 pt-5 mt-1 mb-4">
           <!--- Content Container --->
-          <div class="flex flex-col lg:flex-row border-b border-gray-200 dark:border-dark-5 pb-5 -mx-5">
+          <div class="flex flex-col lg:flex-row border-b border-gray-100 dark:border-dark-5 pb-5 -mx-5">
             <!--- Profile --->
             <div class="flex w-full whitespace-nowrap px-6 py-1 justify-center items-center md:justify-center lg:justify-start">
               <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative items-center justify-center mr-4">
@@ -22,7 +22,7 @@
               </div>
             </div>
             <!--- Contact Details --->
-            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 text-sm px-5 lg:pr-28 md:border-l lg:border-l md:border-r lg:border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 text-sm px-5 lg:pr-28 md:border-l lg:border-l md:border-r lg:border-r border-gray-100 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
               <div class="font-medium font-custom text-center text-gray-600 lg:text-left lg:mt-3">
                 Contact Details
               </div>
@@ -36,7 +36,7 @@
               </div>
             </div>
             <!--- Transaction Details --->
-            <div class="mt-6 lg:mt-0 flex-1 font-custom flex items-center justify-center px-12 gap-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 font-custom flex items-center justify-center px-12 gap-5 border-t lg:border-0 border-gray-100 dark:border-dark-5 pt-5 lg:pt-0">
               <div class="text-center rounded-md w-20 py-3">
                 <div class="font-medium text-blue-800 text-xl">
                   201
