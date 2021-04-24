@@ -20,7 +20,6 @@ import ListBelt from "../ListBelt/ListBelt"
 import UsersCards from "../Cards/UsersCards"
 import Pagination from "../ListPagination/ListPagination"
 import Searching from "../Loading/Searching"
-import Permission from '../Accordion/Permission'
 import subPermission from '../Accordion/subPermission'
 import PPMPTable from '../Forms/PPMPTable'
 export default {
@@ -29,7 +28,6 @@ export default {
     UsersCards,
     Pagination,
     Searching,
-    Permission,
     subPermission,
     PPMPTable,
   },

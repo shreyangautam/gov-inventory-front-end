@@ -4,10 +4,12 @@
       <Sidebar/>
     </div>
     <div class="relative min-h-screen flex flex-col w-full bg-primary px-3 sm:px-3 py-4 lg:py-3 lg:pl-0">
-      <div class="relative flex flex-col w-full h-auto bg-gray-100 px-5 py-1 rounded-3xl">
+      <div class="relative flex flex-col w-full min-h-full bg-gray-100 px-5 py-1 rounded-3xl">
           <Navigation/>
+          <div class="relative h-auto">
            <router-view>
            </router-view>
+           </div>
       </div>
     </div>
   </div>

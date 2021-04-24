@@ -16,6 +16,69 @@
        :isOnline="user.is_online"
        :isActive="user.is_active"
       />
+            <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
+      <UsersCards
+       :email="user.email" 
+       :firstName="user.fname"
+       :lastName="user.lname"
+       :isOnline="user.is_online"
+       :isActive="user.is_active"
+      />
+
       </div>
     </section>
     <!-- PAGINATION -->
@@ -28,7 +91,6 @@ import ListBelt from "../ListBelt/ListBelt"
 import UsersCards from "../Cards/UsersCards"
 import Pagination from "../ListPagination/ListPagination"
 import Searching from "../Loading/Searching"
-import Permission from '../Accordion/Permission'
 import subPermission from '../Accordion/subPermission'
 export default {
   components: {  
@@ -36,11 +98,9 @@ export default {
     UsersCards,
     Pagination,
     Searching,
-    Permission,
     subPermission,
   },
   data(){
-    Permission
     return{
       openDropdown: false,
       listBeltConfig: {

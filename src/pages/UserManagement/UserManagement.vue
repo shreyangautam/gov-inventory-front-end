@@ -104,7 +104,15 @@
 
               </div>
             </div>
-            <div v-if="stepperData[2].isActive">You are in Permission</div>
+            <div v-if="stepperData[2].isActive">
+               <div class="w-full px-4 mb-5">
+                  <Accordion title="PGSO">
+                    <template v-slot:accordion-content>
+                    <h1>This is an accordion</h1>
+                    </template>
+                  </Accordion>
+               </div>
+            </div>
           </template>
         </Stepper>
       </div>
@@ -122,6 +130,7 @@ import Loading from "../../components/Loading";
 import SuccessAlert from "../../components/Alert/SuccessAlert";
 import ErrorAlert from "../../components/Alert/ErrorAlert";
 import DataList from "../../components/Dropdown/DataList";
+import Accordion from "../../components/Accordion/Accordion"
 import { mapState } from "vuex";
 import {
   clearAllFields,
@@ -179,6 +188,7 @@ export default {
     Stepper,
     ModalHeadings,
     DataList,
+    Accordion
   },
   created() {
     this.getUserList();
