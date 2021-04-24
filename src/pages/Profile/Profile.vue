@@ -22,11 +22,11 @@
               </div>
             </div>
             <!--- Contact Details --->
-            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 px-5 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
-              <div class="font-medium text-gray-700 text-center lg:text-left lg:mt-3">
+            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 px-5 md:border-l lg:border-l md:border-r lg:border-r border-gray-100 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+              <div class="font-medium text-gray-700 text-center text-sm lg:text-left lg:mt-3">
                 Contact Details
               </div>
-              <div class="flex flex-col justify-center items-center lg:items-start mt-4 text-gray-600">
+              <div class="flex flex-col justify-center items-center lg:items-start mt-4 text-sm text-gray-600">
                 <div class="truncate sm:whitespace-normal flex items-center">
                   <gmailIcon icon="gmail-icon" class="feather feather-mail w-4 h-4 mr-2"/>admin@example.com
                 </div>
@@ -36,12 +36,12 @@
               </div>
             </div>
             <!--- Transaction Details --->
-            <div class="mt-6 lg:mt-0 flex-1 flex items-center justify-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 flex items-center justify-center px-5 gap-2 border-t lg:border-0 border-gray-100 dark:border-dark-5 pt-5 lg:pt-0">
               <div class="text-center rounded-md w-20 py-3">
                 <div class="font-medium text-blue-800 text-xl">
                   201
                 </div>
-                <div class="text-gray-400">
+                <div class="text-gray-300">
                   Request
                 </div>
               </div>
@@ -50,7 +50,7 @@
                 <div class="font-medium text-blue-800 text-xl">
                   1K
                 </div>
-                <div class="text-gray-400">
+                <div class="text-gray-300">
                   Approved
                 </div>
               </div>
@@ -59,7 +59,7 @@
                 <div class="font-medium text-blue-800 text-xl">
                   492
                 </div>
-                <div class="text-gray-400">
+                <div class="text-gray-300">
                   Rejected
                 </div>
               </div>
