@@ -7,8 +7,8 @@
           <!--- Content Container --->
           <div class="flex flex-col lg:flex-row border-b border-gray-100 dark:border-dark-5 pb-5 -mx-5">
             <!--- Profile --->
-            <div class="flex w-full whitespace-nowrap px-6 py-1 justify-center items-center md:justify-center lg:justify-start">
-              <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative items-center justify-center mr-4">
+            <div class="flex flex-1 px-5 items-center justify-center lg:justify-start">
+              <div class="w-20 h-20 sm:w-24 sm:h-24 flex-none lg:w-32 lg:h-32 image-fit relative">
                 <img src="../../assets/Me2.jpg" alt="" class="rounded-full">
                 <div class="absolute mb-0 mr-0 md:mb-0 md:mr-0 lg:mb-1 lg:mr-1 flex items-center justify-center bottom-0 right-0 bg-theme-1 rounded-full p-1">
                   <a href="#" class="px-1.5 py-1.5 md:py-2 md:px-2 rounded-full bg-blue-800 hover:bg-blue-700">
@@ -16,27 +16,27 @@
                   </a>
                 </div>
               </div>
-              <div class="ml-1 font-custom">
-                  <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-xl text-gray-600">Jed Dylan Lee</div>
-                  <div class="text-gray-400 text-sm">Frontend Developer</div>
+              <div class="ml-5 font-custom">
+                  <div class="w-24 sm:w-40 truncate sm:whitespace-normal font-medium text-xl text-gray-700">Jed Dylan Lee</div>
+                  <div class="text-gray-400 text-sm font-custom">Frontend Developer</div>
               </div>
             </div>
             <!--- Contact Details --->
-            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 text-sm px-5 lg:pr-28 md:border-l lg:border-l md:border-r lg:border-r border-gray-100 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
-              <div class="font-medium font-custom text-center text-gray-600 lg:text-left lg:mt-3">
+            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 px-5 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+              <div class="font-medium text-gray-700 text-center lg:text-left lg:mt-3">
                 Contact Details
               </div>
-              <div class="flex flex-col justify-center items-center lg:items-start mt-4 text-gray-500">
+              <div class="flex flex-col justify-center items-center lg:items-start mt-4 text-gray-600">
                 <div class="truncate sm:whitespace-normal flex items-center">
                   <gmailIcon icon="gmail-icon" class="feather feather-mail w-4 h-4 mr-2"/>admin@example.com
                 </div>
-                <div class="truncate sm:whitespace-normal flex items-center mt-1">
+                <div class="truncate sm:whitespace-normal flex items-center mt-3">
                   <phoneIcon icon="contact-icon" class="feather feather-mail w-4 h-4 mr-2"/>09XX-XXX-XXXX
                 </div>
               </div>
             </div>
             <!--- Transaction Details --->
-            <div class="mt-6 lg:mt-0 flex-1 font-custom flex items-center justify-center px-12 gap-5 border-t lg:border-0 border-gray-100 dark:border-dark-5 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 flex items-center justify-center px-5 border-t lg:border-0 border-gray-200 dark:border-dark-5 pt-5 lg:pt-0">
               <div class="text-center rounded-md w-20 py-3">
                 <div class="font-medium text-blue-800 text-xl">
                   201
