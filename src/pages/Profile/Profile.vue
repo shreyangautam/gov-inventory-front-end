@@ -22,7 +22,7 @@
               </div>
             </div>
             <!--- Contact Details --->
-            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 text-sm px-5 lg:pr-28 border-l border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
+            <div class="mt-6 lg:mt-0 flex-1 dark:text-gray-300 text-sm px-5 lg:pr-28 md:border-l lg:border-l md:border-r lg:border-r border-gray-200 dark:border-dark-5 border-t lg:border-t-0 pt-5 lg:pt-0">
               <div class="font-medium font-custom text-center text-gray-600 lg:text-left lg:mt-3">
                 Contact Details
               </div>
