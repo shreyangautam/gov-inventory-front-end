@@ -12,7 +12,7 @@
                     <span class="ml-2 font-normal  text-md truncate">{{title}}</span>
                 </div>
             </div>
-            <slot v-if="collapse" name="role-permission"></slot>
+            <slot v-if="collapse" name="accordion-content"></slot>
         </li>
     </ul>
 </template>

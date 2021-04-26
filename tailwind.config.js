@@ -9,7 +9,6 @@ module.exports = {
       'primary': '#28425f',
       'secondary': '#0f2846',
     }),
-
     fontFamily: {
       custom: ['Roboto', 'sans-serif']
     },
